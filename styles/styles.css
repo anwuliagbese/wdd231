@@ -12,7 +12,9 @@ nav a {
 h1 {
     color:steelblue;
 }
-
+main {
+    max-width: 500px;
+}
 main img {
     width: 200px;
     height: auto;
