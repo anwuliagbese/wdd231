@@ -5,12 +5,12 @@ body {
     padding: 20px;
 }
 :root {
-    --primary-color: #xxxxxx;
-    --secondary-color: #xxxxxx;
-    --accent1-color: #xxxxxx;
-    --accent2-color: #xxxxxx; 
+    --primary-color: #8ecae6;
+    --secondary-color:#219ebc;
+    --accent1-color: #023047;
+    --accent2-color: white; 
 
-    --heading-font: '________' serif;
+    --heading-font: 'Ralway' serif;
     --paragraph-font: '________' serif;
 
     --nav-background-color: #xxxxxx;
