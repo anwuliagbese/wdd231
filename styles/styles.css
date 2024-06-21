@@ -14,7 +14,7 @@ h1 {
 }
 
 main img {
-    width: 150px;
+   max-width: 200px;
     height: auto;
     border: 1px solid steelblue;
     padding: 2px;
