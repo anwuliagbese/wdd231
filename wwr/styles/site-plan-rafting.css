@@ -1,56 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=font-name&family=optional-2nd-font-name&display=swap');
+
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
 }
 :root {
-    --primary-color: #8ecae6;
-    --secondary-color:#219ebc;
-    --accent1-color: #023047;
-    --accent2-color: white; 
+    --primary-color: #ACBED8;
+    --secondary-color: #E8EBF7;
+    --accent1-color: #F2D398;
+    --accent2-color: #D78521;
 
-    --heading-font: 'Ralway' serif;
-    --paragraph-font: '________' serif;
+    --heading-font: 'Ralway', serif;
+    --paragraph-font:'Montserrat Alternates', serif;
 
-    --nav-background-color: #xxxxxx;
-    --nav-link-color: #xxxxxx;
-    --nav-hover-link-color: #xxxxxx;
-    --nav-hover-background-color: #xxxxxx;
+    --nav-background-color: #ACBED8;
+    --nav-link-color: #E8EBF7;
+    --nav-hover-link-color: #F2D398;
+    --nav-hover-background-color: #D78521;
 }
 body {
-  font-family: var(--paragraph-font);
-  margin_____: 0______;
-  padding______: 0_______;
+    font-family: var(--paragraph-font);
+    max-width: (960px);
+    padding: (20px);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--accent2-color);
 }
 header {
     padding: 20px;
-    background-color: var(--accent1-color);
+    background-color: var(--primary-color);
+    color: #ACBED8;
 }
 p {
     padding: 25px;
 }
+
 nav {
     background-color: var(--nav-background-color);
+    color: #ACBED8;
     font-size: 1.2rem;
     display: flex;
 }
 
 nav a {
     display: block;
-    color: var(--nav-link-color);
+    background-color: var(--nav-background-color);
+    color:#ACBED8;
     text-decoration: none;
     padding: 1rem;
 }
 
 nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+    background-color: var(--nav-background-color);
+    color:#ACBED8;
 }
 nav a:hover {
-    color: var(--nav-hover-link-color);
+   background-color: var(--nav-hover-link-color);
+    color:#F2D398;
     background-color: var(--nav-hover-background-color);
+    color: #D78521;
 }
