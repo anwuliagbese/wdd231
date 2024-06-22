@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=font-name&family=optional-2nd-font-name&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Raleway:wght@500&display=swap');
 
 body {
     font-family: var(--paragraph-font);
@@ -21,8 +21,8 @@ body {
 }
 body {
     font-family: var(--paragraph-font);
-    max-width: (960px);
-    padding: (20px);
+    max-width: 960px;
+    padding: 20px;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
