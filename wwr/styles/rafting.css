@@ -124,7 +124,7 @@ a:hover {
   }
   
   .hero article img {
-    float: right;
+    float: left;
     max-width: 100%;
     height: auto;
     margin-left: 20px;
