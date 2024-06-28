@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&family=Raleway:wght@500&display=swap');
 
-body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
-}
 :root {
     --primary-color: #ACBED8;
     --secondary-color: #E8EBF7;
+    --text-color: #333;
+    --heading-color: #ddd;
     --accent1-color: #F2D398;
     --accent2-color: #D78521;
 
@@ -19,14 +16,26 @@ body {
     --nav-hover-link-color: #F2D398;
     --nav-hover-background-color: #D78521;
 }
+
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
+  font-family: 'Ralway', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ACBED8;
+  color: var(--text-color);
 }
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: o 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--accent2-color);
+    font-weight: bold;
+    color: var(--heading-color);
+    margin-top: 0;
 }
 header {
     padding: 20px;
@@ -34,11 +43,48 @@ header {
     color: #ACBED8;
 }
 p {
+  color: var(--text-color);
+  margin-bottom: 20px;
     padding: 25px;
 }
-.social-link {
+a {
+  color: var(--primary-color);
     text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.social-link {
+  list-style-type: none;
+  padding: 0;
   }
+
+.social-link li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-link li a {
+  color: var(--primary-color);
+}
+
+.social-link li a:hover {
+  text-decoration: none;
+}
+
+.header {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  padding: 20px 0;
+  text-align: center;
+}
+
   .hero {
     position: relative;
     width: 100%;
