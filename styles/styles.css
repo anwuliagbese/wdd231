@@ -44,11 +44,11 @@ aside {
     position: relative;
     top: 47px;
     left: 150px;
+
 }
-aside h2 {
+h2 {
     position: absolute;
 }
-
 aside img {
     width: 150px;
     height: auto;
