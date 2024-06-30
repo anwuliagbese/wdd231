@@ -4,73 +4,67 @@
     --primary-color: #ACBED8;
     --secondary-color: #E8EBF7;
     --text-color: #333;
-    --heading-color: #ddd;
-    --accent1-color: #F2D398;
-    --accent2-color: #D78521;
+}
 
-    --heading-font: 'Ralway', serif;
-    --paragraph-font:'Montserrat Alternates', serif;
-
-    --nav-background-color: #ACBED8;
-    --nav-link-color: #E8EBF7;
-    --nav-hover-link-color: #F2D398;
-    --nav-hover-background-color: #D78521;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Ralway', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
   background-color: #ACBED8;
   color: var(--text-color);
-}
-
-.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: o 20px;
+  padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    color: var(--heading-color);
-    margin-top: 0;
-}
-header {
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: #ACBED8;
-}
-p {
-  color: var(--text-color);
-  margin-bottom: 20px;
-    padding: 25px;
-}
-a {
+h1, h2, h3 {
+  font-weight: 700;
   color: var(--primary-color);
-    text-decoration: none;
+  margin-bottom: 10px;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 a:hover {
   text-decoration: underline;
 }
 
 .social-link {
-  list-style-type: none;
-  padding: 0;
+  text-decoration: none;
   }
 
-.social-link li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-link li a {
-  color: var(--primary-color);
-}
-
-.social-link li a:hover {
+.social-link a:hover {
   text-decoration: none;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-right: 5px;
 }
 
 .header {
@@ -88,46 +82,51 @@ a:hover {
   .hero {
     position: relative;
     width: 100%;
-    max-width: 100%;
-    height: 400px;
-    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   .hero img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: center;
+  }
+
+  .hero .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #ACBED8;
   }
   
   .hero h1 {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    color: var(--primary-color);
-    font-size: 1.5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5rem;
   }
   
   .hero article {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
-    color:(--primary-color);
-   max-width:50%;
   }
   
   .hero article p {
-    margin-bottom: 50px;
-    color: var(--text-color);
+    margin-bottom: 10px;
   }
   
   .hero article img {
     float: right;
-    max-width: 100%;
-    height: auto;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    max-width: 50%;
+    margin-left: 10px;
   }
   
