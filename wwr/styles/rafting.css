@@ -3,6 +3,8 @@
 :root {
     --primary-color: #ACBED8;
     --secondary-color: #E8EBF7;
+    --social-link-color:#ddd;
+    --hero-background-color: steelblue;
     --text-color: #333;
 }
 
@@ -13,11 +15,11 @@
 }
 
 body {
-  font-family: 'Ralway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   background-color: #ACBED8;
   color: var(--text-color);
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
