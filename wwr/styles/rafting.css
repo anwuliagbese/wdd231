@@ -93,7 +93,8 @@ a:hover {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    color: #ddd;
+    color: #333;
+    overflow: hidden;
   }
   
   .hero img {
@@ -103,13 +104,39 @@ a:hover {
     object-fit: cover;
   }
 
-  .hero .content {
-    position: absolute;
+  .hero .hero-content {
+    position: relative;
+    z-index: 1;
     top: 10%;
     left: 10%;
     text-align: left;
-    color: #ACBED8;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
   }
+
+  .hero .hero-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.hero .client-feedback {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 0;
+  background-color: #333;
+  padding: 20px;
+  max-width: 50%;
+}
+
+.hero .client-feedback img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
   
   .hero h1 {
     position: absolute;
