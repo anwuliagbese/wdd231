@@ -20,7 +20,7 @@ nav {
 
 nav a {
     color:#333; 
-    padding: 10px;
+    padding: 0.5rem;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
@@ -58,7 +58,7 @@ p {
 }
 
 aside {
-    width: 20em;
+    width: 20rem;
     margin: 2rem;
     border: 5px solid rgba(0, 0, 0, 0.2); /* 1 */
     padding: 1rem;
