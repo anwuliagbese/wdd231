@@ -15,7 +15,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 2px;
 }
 
 .header-grid {
@@ -50,20 +50,20 @@ nav ul li a {
 
 .history {
     background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .adventures {
     background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .adventures-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    gap: 5px;
 }
 
 .adventures-grid figure {
