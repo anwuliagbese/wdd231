@@ -70,6 +70,38 @@ main {
     margin: 20px auto;
 }
 
+#company-info address {
+    font-style: normal;
+}
+
+#employee-profiles .employee {
+    text-align: center;
+    margin: 20px;
+}
+
+#contact-form label, #contact-form input, #contact-form textarea, #contact-form fieldset, #contact-form button {
+    display: block;
+    margin: 10px 0;
+}
+
+#contact-form input[type="radio"] {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+#contact-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #218838;
+}
+
+
 .history, .adventures {
     background-color: white;
     padding: 20px;
@@ -101,10 +133,34 @@ main {
     color: #0d3b66;
 }
 
-footer {
+.footer {
     background-color: #0d3b66;
     color: white;
     text-align: center;
     padding: 10px 0;
-    margin-top
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 20px 0;
+    background-color: #333;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    float: right;
+}
+.social-icons a:hover {
+    transform: scale(1.1);
 }
