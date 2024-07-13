@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
     padding: 20px;
@@ -45,10 +45,30 @@ nav ul li:last-child {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight:100px;
 }
 #company-info {
-    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  #company-info p {
+    margin: 10px 0;
+  }
+  
+  .map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
   .employee {
     display:flex;
@@ -58,8 +78,8 @@ nav ul li a {
   }
   
   .employee img {
-    border-radius: 100%;
-    width: 160px;
+    border-radius: 50%;
+    width: 150px;
     height: 150px;
   }
   
@@ -95,7 +115,6 @@ nav ul li a {
     background-color: #005f5f;
   }
   
-
 footer {
     background-color: #333;
     color: #fff;
@@ -106,16 +125,13 @@ footer {
     left: 0;
     width: 100%;
 }
-
 .social-icons {
     display: flex;
     justify-content: flex-end;
 }
-
 .social-icons a {
     margin-left: 10px;
 }
-
 .social-icons img {
     width: 25px;
     height: auto;
