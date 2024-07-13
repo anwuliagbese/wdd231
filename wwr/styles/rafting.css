@@ -84,17 +84,14 @@ main {
     margin: 10px 0;
 }
 
-#contact-form input[type="radio"] {
-    display: inline-block;
-    margin: 0 10px 0 0;
-}
-
 #contact-form button {
     background-color: #28a745;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    display: inline-block;
+    margin: 10px;
 }
 .history, .adventures {
     background-color: white;
