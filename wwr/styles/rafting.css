@@ -96,12 +96,6 @@ main {
     border: none;
     cursor: pointer;
 }
-
-#contact-form button:hover {
-    background-color: #218838;
-}
-
-
 .history, .adventures {
     background-color: white;
     padding: 20px;
