@@ -91,7 +91,7 @@ main {
     border: none;
     cursor: pointer;
     display: inline-block;
-    margin: 10px;
+    margin: 0 10px 0;
 }
 .history, .adventures {
     background-color: white;
