@@ -18,12 +18,6 @@ body {
     grid-template-columns: auto 1fr auto;
   }
   
-  header, nav {
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  
   header h1, nav a, footer p {
     margin: 0;
   }
