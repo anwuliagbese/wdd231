@@ -4,20 +4,48 @@ body {
     background-color: #f0f0f0;
     padding: 20px;
 }
-  header, nav, footer {
-    padding: 5px;
-    background-color: #333;
-    color: white;
+.header-grid {
     display:grid;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    position: inherit;
-    text-align:end;
-    max-width: 1200px;
     grid-template-columns: auto 1fr auto;
+    align-items:center;
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+}
+
+nav ul {
+    display:flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+#company-info {
+    padding: 20px;
+    background-color: #f4f4f4;
   }
   
+  header, nav, footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    display: grid;
+    align-items: center;
+    height: auto;
+    position: inherit;
+    text-align:end;
+    justify-content:center;
+    width: 100%;
+    max-width: 1200px;
+    margin-right: 5px;
+  }
   header h1, nav a, footer p {
     margin: 0;
   }
@@ -44,7 +72,7 @@ body {
   }
   
   .map-container iframe {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -95,7 +123,6 @@ body {
   #contact-form button:hover {
     background-color: #005f5f;
   }
-  
 .social-icons {
     display: flex;
     justify-content: flex-end;
