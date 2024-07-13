@@ -78,12 +78,6 @@ main {
     text-align: center;
     margin: 20px;
 }
-
-#contact-form label, #contact-form input, #contact-form textarea, #contact-form fieldset, #contact-form button {
-    display: block;
-    margin: 10px 0;
-}
-
 #contact-form button {
     background-color: #28a745;
     color: white;
