@@ -2,28 +2,31 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 20px;
     background-color: #f4f4f4;
-    color: #333;
+    color: #fff;
+    max-width: 1200px;
+}
+header {
+    margin-bottom: 20px;
+    padding: 10px;
+    display:flex;
+    background-color: #0d3b66;
+    align-items: flex-end;
+    text-align:left;
+    justify-content: flex-start;
 }
 
 .header-grid {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    background-color: #0d3b66;
-    padding: 10px 20px;
-    color: white;
+    gap: 20px;
 }
 
-.header-grid img {
-    height: 50px;
-}
-
-.header-grid h1 {
-    font-size: 1.5em;
-    margin: 0;
+.logo img {
+    max-width: 20%;
 }
 
 nav ul {
@@ -64,7 +67,7 @@ main {
 }
 
 .Wulis_safari img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -78,13 +81,19 @@ main {
     text-align: center;
     margin: 20px;
 }
+#employee img {
+    display:flex;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
 #contact-form button {
     background-color: #28a745;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    display: inline-block;
+    display:grid;
     margin: 0 10px 0;
 }
 .history, .adventures {
@@ -118,34 +127,25 @@ main {
     color: #0d3b66;
 }
 
-.footer {
+footer {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    display:flex;
     background-color: #0d3b66;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    text-align:end;
 }
 .social-icons {
     display: flex;
-    justify-content: center;
     gap: 15px;
-    padding: 0;
-    margin: 20px 0;
-    background-color: #333;
 }
 
-.social-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-}
-
-.social-icons a img {
-    width: 100%;
-    height: auto;
+.social-icons img {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    float: right;
-}
-.social-icons a:hover {
-    transform: scale(1.1);
+    align-items: flex-end;
+    justify-content: right;
+
 }
