@@ -126,6 +126,95 @@ nav a:hover {
     font-size: 0.9rem;
     color: #666;
 }
+section h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+section article {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+section article img {
+    width: 100%;
+    height: auto;
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 20px;
+}
+
+.newsletter form {
+    display: inline-block;
+    text-align: left;
+}
+
+.newsletter label,
+.newsletter input,
+.newsletter button {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
 
 /* Footer styles */
 footer {
