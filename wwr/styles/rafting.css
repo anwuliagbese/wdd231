@@ -24,7 +24,7 @@ header {
     display:grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     background-color: #0d3b66;
     color: #fff;
 }
