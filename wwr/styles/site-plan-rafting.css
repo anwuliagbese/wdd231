@@ -6,16 +6,16 @@ body {
     padding: 20px;
 }
 :root {
-    --primary-color: #ACBED8;
-    --secondary-color: #E8EBF7;
-    --accent1-color: #F2D398;
-    --accent2-color: #D78521;
+    --primary-color:#0000FF;
+    --secondary-color: #333333;
+    --accent1-color: #333333;
+    --accent2-color: #333333;
 
     --heading-font: 'Ralway', serif;
     --paragraph-font:'Montserrat Alternates', serif;
 
-    --nav-background-color: #ACBED8;
-    --nav-link-color: #E8EBF7;
+    --nav-background-color:#0000FF ;
+    --nav-link-color:#333333;
     --nav-hover-link-color: #F2D398;
     --nav-hover-background-color: #D78521;
 }
@@ -24,14 +24,18 @@ body {
     max-width: 960px;
     padding: 20px;
 }
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--accent2-color);
+    color: #333333;
 }
 header {
     padding: 20px;
     background-color: var(--primary-color);
-    color: #ACBED8;
+    color:#ffffff;
+}
+h1 {
+    font-family: var(--heading-font);
+    color: #ffffff;  
 }
 p {
     padding: 25px;
@@ -39,7 +43,7 @@ p {
 
 nav {
     background-color: var(--nav-background-color);
-    color: #ACBED8;
+    color:#0000FF;
     font-size: 1.2rem;
     display: flex;
 }
@@ -47,18 +51,18 @@ nav {
 nav a {
     display: block;
     background-color: var(--nav-background-color);
-    color:#ACBED8;
+    color:#333333;
     text-decoration: none;
     padding: 1rem;
 }
 
 nav a:link, nav a:visited {
     background-color: var(--nav-background-color);
-    color:#ACBED8;
+    color:#ffffff;
 }
 nav a:hover {
    background-color: var(--nav-hover-link-color);
-    color:#F2D398;
+    color:#0000FF;
     background-color: var(--nav-hover-background-color);
-    color: #D78521;
+    color:#0000FF;
 }

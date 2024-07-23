@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #fff;
+    color: #333333;
+    background-color: #ffffff;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -24,12 +24,12 @@ header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 50px;
-    background-color:#0073e6;
+    background-color:#0000FF;
     color: #fff;
 }
 
 .header-grid img {
-    max-width: 30%;
+    max-width: 30%
 }
 
 nav ul {
@@ -41,7 +41,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
@@ -58,7 +58,7 @@ nav a:hover {
 }
 
 .Wulis_safari h2 {
-    color:#0073e6;
+    color:#000000;
 }
 
 .Wulis_safariimg {
@@ -73,7 +73,7 @@ nav a:hover {
     margin-top: 10px;
 }
 button {
-    background-color: #0073e6;
+    background-color: #0000FF;
     color: #ffffff; /* white */
 }
 
@@ -83,7 +83,7 @@ button {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #333333;
     border-radius: 4px;
 }
 
@@ -98,7 +98,7 @@ button {
 .contact-form button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color:#0073e6;
+    background-color:#0000FF;
     color: #ffffff; /* white */
     border: none;
     border-radius: 4px;
@@ -106,7 +106,7 @@ button {
 }
 
 .contact-form button:hover {
-    background-color:#0073e6;
+    background-color:#0000FF;
 }
 
 /* Employee Profiles Styles */
@@ -138,6 +138,7 @@ button {
     border: none;
 }
 
+
 /* History section */
 .history-section {
     margin-bottom: 40px;
@@ -168,7 +169,7 @@ button {
 .adventures-grid figcaption {
     margin-top: 10px;
     font-size: 0.9rem;
-    color: #666;
+    color: #333333;
 }
 section h2 {
     text-align: center;
@@ -191,7 +192,7 @@ section article img {
 .hero {
     position: relative;
     text-align: center;
-    color: white;
+    color:#333333;
 }
 
 .full-width-image {
@@ -236,7 +237,7 @@ section article img {
 .cta-link {
     display: inline-block;
     padding: 10px 20px;
-    background: #0073e6;
+    background:#0000FF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -267,9 +268,10 @@ footer {
     margin-top: 20px;
     padding: 10px;
     display:flex;
-    background-color:#0073e6;
+    background-color:#0000FF;
     text-align:end;
-    color: #fff;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .social-icons {
