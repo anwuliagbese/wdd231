@@ -4,4 +4,4 @@ document.getElementById('currentyear').textContent = currentYear; // Set the tex
 
 // Display the last modified date in the second paragraph
 const lastModifiedDate = document.lastModified; // Get the document's last modified date
-document.getElementById('lastModified').textContent = `Last modified: ${lastModifiedDate}`; // Set the text content of the paragraph with id 'lastModified'
+document.getElementById('lastModified').textContent = `Lastmodified: ${lastModifiedDate}`; // Set the text content of the paragraph with id 'lastModified'
