@@ -12,7 +12,7 @@ h1 {
 }
 
 a {
-    color: #3498db; /* Link color */
+    color:#2c3e50; /* Link color */
     text-decoration: none;
 }
 
@@ -28,7 +28,7 @@ nav {
 }
 
 nav a {
-    color: #ffffff; /* Link text color */
+    color: white; /* Link text color */
     padding: 0.5rem 1rem;
     font-weight: bold;
     text-transform: uppercase;
