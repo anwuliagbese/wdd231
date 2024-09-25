@@ -54,7 +54,7 @@ nav ul li {
 nav a {
     display: block;
     padding: 0.5rem;
-    background-color: #007bff; /* Primary color for links */
+    background-color: #333; /* Primary color for links */
     color: white;
     border-radius: 5px;
 }

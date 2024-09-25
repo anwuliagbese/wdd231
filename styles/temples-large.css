@@ -2,6 +2,7 @@
 nav ul {
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around; /* Space evenly */
+    background-color: #333;
 }
 
 /* Main Content Centering */
@@ -20,6 +21,7 @@ main {
     /* Show navigation horizontally */
     nav ul {
         display: flex;
+        background-color: #333;
     }
 
     /* Hide hamburger in large view */
@@ -31,10 +33,6 @@ main {
     .gallery {
         grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
     }
-}
-body {
-    font-family: 'Roboto', sans-serif; /* Primary font */
-}
 
 h1, h2, nav a {
     font-family: 'Montserrat', sans-serif; /* Secondary font for headings and navigation */
@@ -62,7 +60,8 @@ header, main, footer {
 /* Links Styling */
 a {
     text-decoration: none;
-    color: inherit;
+    color: #fff;
+    background-color: #333;
 }
 
 /* Center Main Content Horizontally */
@@ -78,76 +77,3 @@ footer {
     color: #fff; /* Footer text color */
     padding: 1rem;
 }
-/* Mobile Navigation */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column; /* Vertical layout */
-    gap: 1rem;
-    padding: 0;
-}
-
-/* Menu Items */
-nav ul li {
-    text-align: center;
-}
-
-nav a {
-    display: block;
-    padding: 0.5rem;
-    background-color: #007bff; /* Primary color for links */
-    color: white;
-    border-radius: 5px;
-}
-
-/* Hover Effect */
-nav a:hover {
-    background-color: #0056b3; /* Darker color on hover */
-}
-/* Temple Gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile */
-    gap: 1rem; /* Spacing between grid items */
-}
-
-figure {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-}
-
-figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
-    color: #555;
-}
-/* Hamburger Menu */
-.hamburger {
-    display: none; /* Hidden in large screens */
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/* Mobile Navigation Hidden Initially */
-nav ul {
-    display: none;
-}
-
-nav ul.show {
-    display: flex;
-    flex-direction: column;
-}
-body {
-    font-family: 'Roboto', sans-serif; /* Primary font */
-}
-
-h1, h2, nav a {
-    font-family: 'Montserrat', sans-serif; /* Secondary font for headings and navigation */
-}
-
