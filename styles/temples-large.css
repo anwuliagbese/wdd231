@@ -19,6 +19,7 @@ main {
 /* Large Screens */
 @media screen and (min-width: 768px) {
     /* Show navigation horizontally */
+}
     nav ul {
         display: flex;
         background-color: #333;
