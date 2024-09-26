@@ -35,8 +35,14 @@ main {
         grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
     }
 
-h1, h2, nav a {
+h1 , nav a {
     font-family: 'Montserrat', sans-serif; /* Secondary font for headings and navigation */
+    color: #fff;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif; /* Secondary font for headings and navigation */
+    color: #333; 
+    text-align: center;
 }
 /* Base Styles */
 * {
