@@ -52,7 +52,7 @@ h2 {
 }
 
 body {
-    font-family: 'Roboto', 'Montserrat'; /* Use your own choice of Google Font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     color: #333; /* Adjust based on your color schema */
     background-color: #f9f9f9; /* Adjust based on your color schema */

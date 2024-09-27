@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', 'Montserrat'; /* Use your own choice of Google Font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     color: #333; /* Adjust based on your color schema */
     background-color: #f9f9f9; /* Adjust based on your color schema */
@@ -103,9 +103,9 @@ nav ul.show {
     flex-direction: column;
 }
 body {
-    font-family: 'Roboto', 'Montserrat'; /* Primary font */
+    font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, nav a {
-    font-family: 'Montserrat', 'Roboto'; /* Secondary font for headings and navigation */
+    font-family: 'Montserrat', sans-serif;
 }
