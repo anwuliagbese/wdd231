@@ -78,6 +78,11 @@ figcaption {
     font-size: 2rem;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+.hamburger {
+        display: block;
+    }
+}
 nav ul {
     display: none;
 }

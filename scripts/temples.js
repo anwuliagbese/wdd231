@@ -13,4 +13,8 @@ if (hamburger) {
     // Your code for handling the click event
   });
 }
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('.nav-menu').classList.toggle('active');
+});
+
 
