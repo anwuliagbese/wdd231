@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const hamburger = document.querySelector('.hamburger');
 if (hamburger) {
   hamburger.addEventListener('click', function() {
+    // Your code for handling the click event
   });
 }
 
