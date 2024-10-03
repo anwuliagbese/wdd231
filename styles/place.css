@@ -1,57 +1,109 @@
+/* Global Styles */
 :root {
-    --primary-color: #006600; /* Example color scheme for Nigeria */
-    --secondary-color: #ffcc00;
-    --font-size-large: 2rem;
-    --font-size-medium: 1.5rem;
-    --font-size-small: 1rem;
+    --main-bg-color: #f0f0f0;
+    --main-text-color: #333333;
 }
 
 body {
     font-family: Arial, sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: var(--primary-color);
 }
 
 header {
-    background-color: var(--primary-color);
-    color: white;
+    text-align: center;
     padding: 1rem;
+    background-color: #005f73;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.hero {
+    position: relative;
     text-align: center;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    justify-content: center;
 }
 
-.place-data, .weather {
+.hero h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.place-details, .weather {
     padding: 1rem;
 }
 
-.weather h2::after {
+.weather h3::after {
     content: "⛅";
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
+    padding-left: 10px;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: #005f73;
+    color: white;
 }
 
+/* Media Queries */
 @media (min-width: 768px) {
-    .hero img {
-        height: 400px;
-    }
-    .place-data, .weather {
+    .place-info, .weather {
         display: flex;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
+        justify-content: right;
     }
 }
+/* Weather Section */
+.weather {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px; /* Optional to limit the width */
+    margin: 0 auto;
+}
+
+/* Heading Style */
+.weather h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333; /* Darker color for better contrast */
+}
+
+/* Weather Details Style */
+.weather-details {
+    display: grid;
+    flex-direction: row;
+    gap: 0.2rem; /* Space between weather details */
+    font-size: 1rem;
+    color: #333; /* Adjust text color for better readability */
+    text-align: center; /* Center-align text for narrow screens */
+}
+
+/* For wider screens, arrange details in a row */
+@media (min-width: 768px) {
+    .weather-details {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
