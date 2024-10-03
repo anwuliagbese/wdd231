@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     lastUpdatedSpan.textContent = document.lastModified;
 });
 
-// Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav ul');
+if (hamburger) {
+  hamburger.addEventListener('click', function() {
+    // Your code for handling the click event
+  });
+}
 
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
-    hamburger.textContent = hamburger.textContent === '☰' ? 'X' : '☰';
-});

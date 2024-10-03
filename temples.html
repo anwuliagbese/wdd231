@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore our collection of historical temples, showcasing beautiful architecture and cultural heritage from around the world.">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Anwuli Joyce Agbese">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Temples Album | Explore Historical Temples</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/temples.css">
     <link rel="stylesheet" href="./styles/temples-large.css" media="screen and (min-width: 768px)">
+    <script src="./scripts/temples.js" defer></script>
     
 </head>
 <body>
 
     <header>
+        <h1 class="album-title">Temple Album</h1>
         <nav>
             <ul>
-                <li><h1>Temple Album</h1></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -61,7 +62,7 @@
                 <figcaption>San Diego Temple</figcaption>
             </figure>
             <figure>
-                <img src="./images/provo-utah-temple.jpg" alt="Temple Image">
+                <img src="images/provo-utah-temple.jpg" alt="Temple Image">
                 <figcaption>Provo Utah Temple</figcaption>
             </figure>
             <figure>
@@ -69,12 +70,18 @@
                 <figcaption>Aba Nigeria Temple</figcaption>
             </figure>
         </div>
+        
+        <div class=".hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span>| Anwuli Joyce Agbese, Nigeria</p>
         <p>Last Modification: <span id="lastUpdated"></span></p>
     </footer>
-    <script src="./scripts/temples.js" defer></script>
 </body>
 </html>

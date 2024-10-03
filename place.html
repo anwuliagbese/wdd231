@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mambilla Plateau, Taraba State, Nigeria</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <!-- Header Section with Hero Image -->
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class=".hero img ">
+            <picture>
+            <source srcset="images/Mambilla-Plateau-Taraba-State-Nigeria.webp" media="(min-width: 768px)">
+            <source srcset="images/The-Crane-bird.webp" media="(max-width: 767px)">
+            <img src="images/Mambilla-Plateau-Taraba-State-Nigeria.webp" alt="Hero Image">
+            </picture>
+        </section>
+        <!-- Place Details Section -->
+        <section class="place-details">
+            <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 9,389 km²</li>
+                    <li><strong>Population:</strong> 300,000</li>
+                    <li><strong>Capital:</strong> Gembu</li>
+                    <li><strong>Languages:</strong> Fulfulde(Fula), Mambila, Hausa and English</li>
+                    <li><strong>Currency:</strong>Nigerian Naira (₦)</li>
+                    <li><strong>Time Zone:</strong> West Africa Time (WAT) UTC +1</li>
+                    <li><strong>Calling Code:</strong> +234</li>
+                    <li><strong>Internet TLD:</strong>.ng (Nigeria)</li>
+                </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <div class="weather-info">
+                <p><strong>Temperature:</strong> 18°C</p>
+                <p><strong>Conditions:</strong> Cloudy</p>
+                <p><strong>Wind Speed:</strong> 10 km/h</p>
+                <p><strong>Windchill:</strong> <span id="windchill">Calculating...</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
