@@ -52,8 +52,19 @@ nav ul li {
 }
 
 .weather h3::after {
-    content: "⛅";
     padding-left: 10px;
+}
+.weather img {
+    width: 50px; /* Set the size of the SVG */
+    height: auto;
+    vertical-align: middle; /* Align with the text */
+    margin-left: 5px; /* Add space between text and icon */
+}
+
+@media screen and (max-width: 600px) {
+    .weather img {
+        width: 24px; /* Smaller icon for mobile */
+    }
 }
 
 footer {
