@@ -116,8 +116,30 @@ footer {
         text-align: left;
     }
 }
-/* For desktop view */
+/* Add weather icon for desktop view */
 @media screen and (min-width: 768px) {
+    .weather-text::before {
+      content: "☀️"; /* Example: Sun emoji */
+      font-size: 2rem;
+      margin-right: 10px;
+    }
+  }
+  
+  /* Hide icon in mobile view */
+  @media screen and (max-width: 767px) {
+    .weather-text::before {
+      content: "";
+    }
+  }
+  
+  /* Show SVG only in mobile view */
+@media screen and (max-width: 767px) {
+    .mobile-svg {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
     .mobile-svg {
       display: none;
     }
