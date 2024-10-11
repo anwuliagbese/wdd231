@@ -85,7 +85,7 @@ footer {
     background-color: #f0f0f0;
     padding: 1.5rem;
     border-radius: 8px;
-    max-width: 600px; /* Optional to limit the width */
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ footer {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
-    color: #333; /* Darker color for better contrast */
+    color: #333;
 }
 
 /* Weather Details Style */
@@ -104,8 +104,8 @@ footer {
     flex-direction: row;
     gap: 0.2rem; /* Space between weather details */
     font-size: 1rem;
-    color: #333; /* Adjust text color for better readability */
-    text-align: center; /* Center-align text for narrow screens */
+    color: #333;
+    text-align: center;
 }
 
 /* For wider screens, arrange details in a row */
@@ -152,9 +152,9 @@ footer {
     }
   }
   .emoticon::after {
-    content: "😊"; /* Unicode for a smiley face */
-    font-size: 2rem; /* Adjust size */
-    margin-left: 10px; /* Space between text and emoticon */
+    content: "😊";
+    font-size: 2rem;
+    margin-left: 10px;
   }
   
   
