@@ -22,6 +22,9 @@
 
     <!-- Main Content Section -->
     <main>
+        <h2>Home</h2>
+        <p class="emoticon">Feeling happy</p>
+
         <section class="hero">
             <picture>
                 <source srcset="images/Mambilla-Plateau-Taraba-State-Nigeria.webp" type="image/webp" media="(min-width: 768px)">
@@ -53,7 +56,19 @@
                 <p>Windchill: N/A</p>
             </div>
         </section>
-        
+        <div>
+            <label for="temperature">Temperature (°F):</label>
+            <input type="number" id="temperature" placeholder="Enter temperature">
+          </div>
+          
+          <div>
+            <label for="windSpeed">Wind Speed (mph):</label>
+            <input type="number" id="windSpeed" placeholder="Enter wind speed">
+          </div>
+          
+          <button onclick="checkConditions()">Calculate Wind Chill</button>
+          
+          <p id="result"></p>
     </main>
 
     <!-- Footer Section -->

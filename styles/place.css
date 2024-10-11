@@ -116,4 +116,24 @@ footer {
         text-align: left;
     }
 }
+/* For desktop view */
+@media screen and (min-width: 768px) {
+    .mobile-svg {
+      display: none;
+    }
+  }
+  
+  /* For mobile view */
+  @media screen and (max-width: 767px) {
+    .desktop-svg {
+      display: none;
+    }
+  }
+  .emoticon::after {
+    content: "😊"; /* Unicode for a smiley face */
+    font-size: 2rem; /* Adjust size */
+    margin-left: 10px; /* Space between text and emoticon */
+  }
+  
+  
 
