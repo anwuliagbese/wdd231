@@ -1,0 +1,42 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Section Headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+}
+
+/* Links */
+a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
