@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review.">
+    <meta name="author" content="Anwuli Joyce Agbese">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Review Submitted</title>
     <link rel="stylesheet" href="styles/form.css">
 </head>
@@ -13,19 +19,17 @@
     
     <main>
         <p>Thank you for your review!</p>
-        <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+        <p>Total Reviews Submitted: <span id="review-count">0</span></p>
     </main>
-
     <footer>
-        <p>Common footer content for assignments.</p>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
     </footer>
-
     <script>
-        // Display the review count
-        document.addEventListener('DOMContentLoaded', function() {
-            const reviewCount = localStorage.getItem('reviewCount') || 0;
-            document.getElementById('reviewCount').textContent = reviewCount;
-        });
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
     </script>
+    <script src="scripts/review.js"></script>
+    
 </body>
 </html>

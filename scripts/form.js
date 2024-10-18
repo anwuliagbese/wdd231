@@ -43,7 +43,6 @@ function populateProductOptions() {
 // Call the function to populate the select options
 populateProductOptions();
 
-
 // Add event listener to form for submission
 document.getElementById('reviewForm').addEventListener('submit', function() {
     let reviewCount = localStorage.getItem('reviewCount');
