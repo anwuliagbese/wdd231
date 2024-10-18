@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+    
+    <main>
+        <p>Thank you for your review!</p>
+        <p>Total Reviews Submitted: <span id="reviewCount">0</span></p>
+    </main>
+
+    <footer>
+        <p>Common footer content for assignments.</p>
+    </footer>
+
+    <script>
+        // Display the review count
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewCount = localStorage.getItem('reviewCount') || 0;
+            document.getElementById('reviewCount').textContent = reviewCount;
+        });
+    </script>
+</body>
+</html>

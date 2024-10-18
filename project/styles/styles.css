@@ -40,3 +40,89 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28a745;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .cta-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Meal Plans Section */
+  .meal-plans {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .meal-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .meal-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 30%;
+  }
+  
+  /* Testimonials Section */
+  .testimonials blockquote {
+    font-style: italic;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .social-icons img {
+    width: 20px;
+    margin: 0 5px;
+  }
+  
