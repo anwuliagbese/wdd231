@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onyx Healthy Bites - Menu</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Onyx Healthy Bites</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reviews.html">Reviews & FAQ</a>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h2>Explore Our Menu</h2>
+        <div class="menu-cards">
+            <div class="menu-card">Local Dishes</div>
+            <img src="images/Local dish.jpg" alt="Healthy food banner" loading="lazy">
+            <div class="menu-card">Continental Dishes</div>
+            <img src="images/continental dish.jpg" alt="Healthy food banner" loading="lazy">
+            <div class="menu-card">Low-Carb Options</div>
+            <img src="images/low-carb.jpg" alt="Healthy food banner" loading="lazy">
+            <div class="menu-card">Protein-Rich Meals</div>
+            <img src="images/Nigerian-Beans-Porridge.jpg" alt="Healthy food banner" loading="lazy">
+            <div class="menu-card">Desserts</div>
+            <img src="images/Dessert.jpg" alt="Healthy food banner" loading="lazy">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+    <script src="scripts/scripts.js"defer></script>
+
+</body>
+</html>

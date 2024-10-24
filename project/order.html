@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Meals - HealthyBites</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Order Your Meal</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order Meals</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <section>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="meal">Select Meal:</label>
+            <select id="meal" name="meal" required>
+                <option value="Beans">Beans and Plantain</option>
+                <option value="grilledChicken">Grilled Chicken</option>
+                <option value="Icecream">Icecream</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HealthyBites. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

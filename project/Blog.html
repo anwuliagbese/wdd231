@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - HealthyBites</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Healthy Living Blog</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order Meals</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Nutrition Tips</h2>
+            <p>Learn how to balance your meals for better energy and well-being.</p>
+        </article>
+
+        <article>
+            <h2>Fitness Advice</h2>
+            <p>Discover effective workouts that complement your healthy eating habits.</p>
+        </article>
+
+        <article>
+            <h2>Recipes for Healthy Living</h2>
+            <p>Explore delicious and nutritious recipes to try at home.</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
