@@ -35,9 +35,20 @@
             <button type="submit">Submit Order</button>
         </form>
     </section>
-
     <footer>
-        <p>&copy; 2024 HealthyBites. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+    
 </body>
 </html>

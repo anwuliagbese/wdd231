@@ -16,21 +16,61 @@
     <nav class="navbar">
       <button class="menu-btn" onclick="toggleMenu()">☰</button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="menu.html">Meal Plans</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="Blog.html">Blog</a></li>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="blog.html">Blog</a>
+        <a href="review.html">Reviews</a>
+        <a href="order.html">Order Now</a>
+        <a href="contact.html">Contact</a>
       </ul>
     </nav>
   </header>
-  <section id="intro">
+  <section class="hero">
     <h1>Welcome to Onyx Healthy Bites</h1>
-    <h2>Eat Healthy, Live Happier!</h2>
-    <p>We deliver delicious, nutritious meals tailored to meet your health goals. Order today and start your journey to a better you!</p>
-    <button class="cta-button">Order Now</button>
-    <ul id="cta-button" class="cta-button">
-      <li><a href="order.html"></a></li>
-    </ul>
+    <h2>Delicious & Healthy Meals, Delivered to Your Doorstep</h2>
+    <p>Explore meal plans that fit your lifestyle. Start your journey towards healthier living today!</p>
+    <a href="order.html" class="cta-button">Order Now</a>
+</section>
+  
+<section id="mission">
+  <div class="container">
+      <h2>Our Mission</h2>
+      <p>
+          At Onyx Healthy Bites, we are dedicated to promoting a healthier lifestyle
+          through the creation of balanced meals. We believe that nutritious food 
+          is essential for our overall well-being, and as such, we strive to make healthy eating 
+          accessible, affordable and enjoyable for everyone.
+      </p>
+      <p>
+          Join us on our journey to inspire healthier eating habits and encourage 
+          individuals to make better food choices. Together, we can build a 
+          healthier community, one meal at a time.
+      </p>
+  </div>
+
+  <section id="meet-ceo">
+    <div class="container">
+        <h2>Meet the CEO</h2>
+        <div class="ceo-profile">
+            <img src="ceo-photo.jpg" alt="CEO Name" class="ceo-photo"> <!-- Add CEO photo -->
+            <div class="ceo-info">
+                <h3>Anwuli Joyce Agbese</h3>
+                <p>
+                    [CEO Name] has been at the forefront of [Your Company Name] since its inception. 
+                    With a passion for healthy living and a commitment to community wellness, [he/she/they] 
+                    has led the company to become a trusted source for balanced meals that nourish both 
+                    body and mind.
+                </p>
+                <p>
+                    Under [his/her/their] leadership, [Your Company Name] has expanded its offerings and 
+                    engaged with countless individuals, promoting a lifestyle rooted in health and wellness. 
+                    [CEO Name] believes in the power of food to transform lives and is dedicated to 
+                    making a positive impact on our community.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 </section>
   <!-- Hero Section -->
   
@@ -104,7 +144,14 @@
     <div class="footer-links">
       <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
     </div>
-    <p>&copy; 2024 Onyx Healthy Bites. All Rights Reserved.</p>
+  
+    <p>Onyx Healthy Bites. All Rights Reserved.</p>
+    <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+      <p> Last modified: <span id="lastModified"></span></p>
+      <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
     <div class="social-icons">
       <a href="#"><img src="images/facebook-logo.jpg" alt="Facebook"></a>
       <a href="#"><img src="images/instagram logo.jpg" alt="Instagram"></a>
@@ -112,6 +159,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="scripts/scripts.js" defer></script>
 </body>
 </html>

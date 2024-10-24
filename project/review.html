@@ -12,7 +12,7 @@
         <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
-            <a href="reviews.html">Reviews & FAQ</a>
+            <a href="review.html">Reviews & FAQ</a>
         </nav>
     </header>
 
@@ -32,11 +32,15 @@
             <div class="faq-answer">Our meals are freshly prepared daily.</div>
         </div>
     </section>
-
-    <footer class="footer">
-        <p>&copy; 2024 Onyx Healthy Bites</p>
+    <footer>
+        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
+        <p> Last modified: <span id="lastModified"></span></p>
     </footer>
 
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
     <script src="scripts/scripts.js" defer></script>
 </body>
 </html>
