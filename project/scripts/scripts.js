@@ -108,4 +108,21 @@ if (scrollToTopBtn) {
 // Update footer
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
-});
+
+        // JavaScript for FAQ toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon');
+
+                // Toggle visibility of the answer
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+
+                // Change the icon between '+' and '-'
+                icon.textContent = icon.textContent === '+' ? '-' : '+';
+            });
+        });
