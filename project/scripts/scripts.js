@@ -32,3 +32,24 @@ faqQuestions.forEach((question) => {
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
 });
+// Form Validation Function
+function validateForm(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name === '' || email === '' || message === '') {
+        alert('All fields are required!');
+        return false;
+    }
+
+    if (!email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    alert('Your message has been sent successfully!');
+    document.getElementById('contact-form').reset(); // Clear the form
+}
