@@ -1,108 +1,111 @@
-// Execute functions once the DOM is fully loaded
+// Ensure all functions execute only after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    displayWelcomeMessage();
+    initWelcomeMessage();
     loadBlogPosts();
-    setupNewsletterForm();
-    setupDarkModeToggle();
+    handleNewsletterForm();
+    toggleDarkMode();
+    displaySupportTeam();
 });
 
-// 1. Function to Display Dynamic Welcome Message Based on Time of Day
-function displayWelcomeMessage() {
-    const welcomeMessage = document.getElementById('welcome-message');
+// 1. Dynamic Welcome Message Based on Time of Day and Stored User Name
+function initWelcomeMessage() {
+    const welcomeMsg = document.getElementById('welcome-message');
     const userName = localStorage.getItem('userName') || 'Guest';
 
-    const currentHour = new Date().getHours();
-    let greeting;
+    const hour = new Date().getHours();
+    const greeting = (hour < 12) ? 'Good Morning' : 
+                     (hour < 18) ? 'Good Afternoon' : 'Good Evening';
 
-    if (currentHour < 12) {
-        greeting = 'Good Morning';
-    } else if (currentHour < 18) {
-        greeting = 'Good Afternoon';
-    } else {
-        greeting = 'Good Evening';
-    }
-
-    welcomeMessage.textContent = `${greeting}, ${userName}! Welcome to our site.`;
+    welcomeMsg.textContent = `${greeting}, ${userName}! Welcome to our site.`;
 }
 
-// 2. Blog Posts Data Stored in an Array of Objects
+// 2. Array of Blog Posts (Objects) with Dynamic Rendering
 const blogPosts = [
-    { title: '5 Tips for Healthy Eating', date: '2024-10-01', content: 'Discover simple ways to eat healthy.' },
-    { title: 'How to Stay Active at Work', date: '2024-10-10', content: 'Keep moving throughout your workday.' },
-    { title: 'The Benefits of Green Vegetables', date: '2024-10-15', content: 'Why greens should be part of your diet.' }
+    { title: '5 Tips for Healthy Eating', date: '2024-10-01', content: 'Learn easy ways to eat healthy every day.' },
+    { title: 'How to Stay Active at Work', date: '2024-10-10', content: 'Simple ways to move more during work hours.' },
+    { title: 'The Benefits of Green Vegetables', date: '2024-10-15', content: 'Discover why green veggies are essential.' }
 ];
 
-// 3. Function to Load and Display Blog Posts Dynamically
 function loadBlogPosts() {
     const blogContainer = document.getElementById('blog-posts');
+    if (!blogContainer) return;
 
-    if (blogContainer) {
-        const postsHTML = blogPosts
-            .map(
-                post => `
-                <div class="card">
-                    <h2>${post.title}</h2>
-                    <p><small>${post.date}</small></p>
-                    <p>${post.content}</p>
-                </div>`
-            )
-            .join('');
+    const postsHTML = blogPosts.map(post => `
+        <div class="card">
+            <h2>${post.title}</h2>
+            <p><small>${post.date}</small></p>
+            <p>${post.content}</p>
+        </div>
+    `).join('');
 
-        blogContainer.innerHTML = postsHTML;
-    }
+    blogContainer.innerHTML = postsHTML;
 }
-function setupeviewForm() {
+
+// 3. Newsletter Subscription Form Handling with LocalStorage
+function handleNewsletterForm() {
     const nameInput = document.getElementById('user-name');
-    const subscribeButton = document.getElementById('subscribe-btn');
+    const subscribeBtn = document.getElementById('subscribe-btn');
 
-    if (subscribeButton) {
-        // Check if user name is already stored
-        const storedName = localStorage.getItem('userName');
-        if (storedName) {
-            nameInput.value = storedName;
-            subscribeButton.disabled = true;
-            subscribeButton.textContent = 'Subscribed';
-        }
+    if (!subscribeBtn) return;
 
-        // Handle Form Submission
-        subscribeButton.addEventListener('click', () => {
-            const userName = nameInput.value.trim();
-            if (userName) {
-                localStorage.setItem('userName', userName);
-                alert(`Thank you for subscribing, ${userName}!`);
-                subscribeButton.disabled = true;
-                subscribeButton.textContent = 'Subscribed';
-            } else {
-                alert('Please enter your name.');
-            }
-        });
+    // Check for existing subscription
+    const savedName = localStorage.getItem('userName');
+    if (savedName) {
+        nameInput.value = savedName;
+        subscribeBtn.disabled = true;
+        subscribeBtn.textContent = 'Subscribed';
     }
+
+    subscribeBtn.addEventListener('click', () => {
+        const userName = nameInput.value.trim();
+        if (userName) {
+            localStorage.setItem('userName', userName);
+            alert(`Thank you for subscribing, ${userName}!`);
+            subscribeBtn.disabled = true;
+            subscribeBtn.textContent = 'Subscribed';
+        } else {
+            alert('Please enter your name to subscribe.');
+        }
+    });
 }
 
-// 5. Function to Set Up Dark Mode Toggle Using Conditional Logic
-function setupDarkModeToggle() {
+// 4. Dark Mode Toggle with State Persistence via LocalStorage
+function toggleDarkMode() {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const body = document.body;
 
-    if (darkModeToggle) {
-        // Check LocalStorage for Dark Mode Preference
-        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-        if (darkModeEnabled) {
-            body.classList.add('dark-mode');
-            darkModeToggle.textContent = 'Light Mode';
-        }
+    if (!darkModeToggle) return;
 
-        // Handle Toggle Click Event
-        darkModeToggle.addEventListener('click', () => {
-            const isDarkMode = body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-            darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-        });
+    const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
+    if (isDarkModeEnabled) {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = 'Light Mode';
     }
+
+    darkModeToggle.addEventListener('click', () => {
+        const darkModeActive = body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', darkModeActive);
+        darkModeToggle.textContent = darkModeActive ? 'Light Mode' : 'Dark Mode';
+    });
 }
 
-// Update footer
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
+// 5. Customer Support Team Section Display with Array of Objects
+const supportTeam = [
+    { name: 'Mr. Theophilus', role: 'Customer Support Manager' },
+    { name: 'Mrs.Lois Chioma', role: 'Administrative assistant' },
+    { name: 'Adoram Tom', role: 'IT Officer' }
+];
 
+function displaySupportTeam() {
+    const supportContainer = document.getElementById('support-team');
+    if (!supportContainer) return;
 
+    const teamHTML = supportTeam.map(member => `
+        <div class="support-card">
+            <h3>${member.name}</h3>
+            <p>${member.role}</p>
+        </div>
+    `).join('');
+
+    supportContainer.innerHTML = teamHTML;
+}
