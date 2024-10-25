@@ -1,128 +1,108 @@
-// script.js
-
-// 1. Smooth Scroll for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Execute functions once the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    displayWelcomeMessage();
+    loadBlogPosts();
+    setupNewsletterForm();
+    setupDarkModeToggle();
 });
 
-// 2. Store Contact Form Data in Local Storage (contact.html)
-const contactForm = document.querySelector('#contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.querySelector('#name').value;
-        const email = document.querySelector('#email').value;
-        const message = document.querySelector('#message').value;
+// 1. Function to Display Dynamic Welcome Message Based on Time of Day
+function displayWelcomeMessage() {
+    const welcomeMessage = document.getElementById('welcome-message');
+    const userName = localStorage.getItem('userName') || 'Guest';
 
-        localStorage.setItem('contactData', JSON.stringify({ name, email, message }));
-        alert('Your message has been saved! We will get back to you soon.');
-        contactForm.reset();
-    });
+    const currentHour = new Date().getHours();
+    let greeting;
+
+    if (currentHour < 12) {
+        greeting = 'Good Morning';
+    } else if (currentHour < 18) {
+        greeting = 'Good Afternoon';
+    } else {
+        greeting = 'Good Evening';
+    }
+
+    welcomeMessage.textContent = `${greeting}, ${userName}! Welcome to our site.`;
 }
 
-// 3. Toggle FAQ in Terms and Privacy Pages (terms.html, privacy.html)
-document.querySelectorAll('.faq-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        content.classList.toggle('hidden');
-    });
-});
-
-// 4. Load Reviews Dynamically (review.html)
-const reviews = [
-    { name: 'Jane Doe', review: 'Amazing service and delicious meals!' },
-    { name: 'John Smith', review: 'The fitness tips are life-changing!' }
+// 2. Blog Posts Data Stored in an Array of Objects
+const blogPosts = [
+    { title: '5 Tips for Healthy Eating', date: '2024-10-01', content: 'Discover simple ways to eat healthy.' },
+    { title: 'How to Stay Active at Work', date: '2024-10-10', content: 'Keep moving throughout your workday.' },
+    { title: 'The Benefits of Green Vegetables', date: '2024-10-15', content: 'Why greens should be part of your diet.' }
 ];
 
-const reviewContainer = document.querySelector('#reviews');
-if (reviewContainer) {
-    reviews.forEach(({ name, review }) => {
-        const reviewCard = document.createElement('div');
-        reviewCard.className = 'review-card';
-        reviewCard.innerHTML = `<h3>${name}</h3><p>${review}</p>`;
-        reviewContainer.appendChild(reviewCard);
-    });
-}
+// 3. Function to Load and Display Blog Posts Dynamically
+function loadBlogPosts() {
+    const blogContainer = document.getElementById('blog-posts');
 
-// 5. Order Form Validation (order.html)
-const orderForm = document.querySelector('#order-form');
-if (orderForm) {
-    orderForm.addEventListener('submit', (e) => {
-        const mealPlan = document.querySelector('#meal-plan').value;
-        const deliveryDate = document.querySelector('#delivery-date').value;
+    if (blogContainer) {
+        const postsHTML = blogPosts
+            .map(
+                post => `
+                <div class="card">
+                    <h2>${post.title}</h2>
+                    <p><small>${post.date}</small></p>
+                    <p>${post.content}</p>
+                </div>`
+            )
+            .join('');
 
-        if (!mealPlan || !deliveryDate) {
-            e.preventDefault();
-            alert('Please select a meal plan and delivery date.');
-        } else {
-            alert('Your order has been placed successfully!');
-        }
-    });
-}
-
-// 6. Show/Hide Menu Items (menu.html)
-const toggleMenuBtn = document.querySelector('#toggle-menu');
-const menuItems = document.querySelector('#menu-items');
-
-if (toggleMenuBtn) {
-    toggleMenuBtn.addEventListener('click', () => {
-        menuItems.classList.toggle('hidden');
-    });
-}
-
-// 7. Blog Search Functionality (blog.html)
-const searchInput = document.querySelector('#blog-search');
-const blogSnippets = document.querySelectorAll('.blog-snippet');
-
-if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        blogSnippets.forEach(snippet => {
-            const title = snippet.querySelector('h3').textContent.toLowerCase();
-            snippet.style.display = title.includes(searchTerm) ? '' : 'none';
-        });
-    });
-}
-
-// 8. Scroll to Top Button (index.html and other pages)
-const scrollToTopBtn = document.querySelector('#scroll-to-top');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
+        blogContainer.innerHTML = postsHTML;
     }
-});
-
-if (scrollToTopBtn) {
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
 }
+function setupeviewForm() {
+    const nameInput = document.getElementById('user-name');
+    const subscribeButton = document.getElementById('subscribe-btn');
+
+    if (subscribeButton) {
+        // Check if user name is already stored
+        const storedName = localStorage.getItem('userName');
+        if (storedName) {
+            nameInput.value = storedName;
+            subscribeButton.disabled = true;
+            subscribeButton.textContent = 'Subscribed';
+        }
+
+        // Handle Form Submission
+        subscribeButton.addEventListener('click', () => {
+            const userName = nameInput.value.trim();
+            if (userName) {
+                localStorage.setItem('userName', userName);
+                alert(`Thank you for subscribing, ${userName}!`);
+                subscribeButton.disabled = true;
+                subscribeButton.textContent = 'Subscribed';
+            } else {
+                alert('Please enter your name.');
+            }
+        });
+    }
+}
+
+// 5. Function to Set Up Dark Mode Toggle Using Conditional Logic
+function setupDarkModeToggle() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    if (darkModeToggle) {
+        // Check LocalStorage for Dark Mode Preference
+        const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+        if (darkModeEnabled) {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = 'Light Mode';
+        }
+
+        // Handle Toggle Click Event
+        darkModeToggle.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            darkModeToggle.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    }
+}
+
 // Update footer
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-        // JavaScript for FAQ toggle functionality
-        const faqItems = document.querySelectorAll('.faq-item');
 
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-
-            question.addEventListener('click', () => {
-                const answer = item.querySelector('.faq-answer');
-                const icon = question.querySelector('.faq-icon');
-
-                // Toggle visibility of the answer
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-
-                // Change the icon between '+' and '-'
-                icon.textContent = icon.textContent === '+' ? '-' : '+';
-            });
-        });
