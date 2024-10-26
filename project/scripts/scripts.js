@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initWelcomeMessage();
     loadBlogPosts();
-    handleNewsletterForm();
     toggleDarkMode();
     displaySupportTeam();
 });
@@ -41,33 +40,7 @@ function loadBlogPosts() {
     blogContainer.innerHTML = postsHTML;
 }
 
-// 3. Newsletter Subscription Form Handling with LocalStorage
-function handleNewsletterForm() {
-    const nameInput = document.getElementById('user-name');
-    const subscribeBtn = document.getElementById('subscribe-btn');
 
-    if (!subscribeBtn) return;
-
-    // Check for existing subscription
-    const savedName = localStorage.getItem('userName');
-    if (savedName) {
-        nameInput.value = savedName;
-        subscribeBtn.disabled = true;
-        subscribeBtn.textContent = 'Subscribed';
-    }
-
-    subscribeBtn.addEventListener('click', () => {
-        const userName = nameInput.value.trim();
-        if (userName) {
-            localStorage.setItem('userName', userName);
-            alert(`Thank you for subscribing, ${userName}!`);
-            subscribeBtn.disabled = true;
-            subscribeBtn.textContent = 'Subscribed';
-        } else {
-            alert('Please enter your name to subscribe.');
-        }
-    });
-}
 
 // 4. Dark Mode Toggle with State Persistence via LocalStorage
 function toggleDarkMode() {

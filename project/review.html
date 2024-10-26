@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onyx Healthy Bites - Reviews & FAQ</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -49,15 +50,23 @@
             <div class="faq-answer">Orders can be canceled or modified up to 24 hours before the scheduled delivery time. Please contact our customer support team for assistance.
             </div>
     </section>
-    <footer>
+    <footer class="footer">
+        <div class="footer-links">
+          <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+        </div>
+      
+        <p>Onyx Healthy Bites. All Rights Reserved.</p>
         <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
-        <p> Last modified: <span id="lastModified"></span></p>
-    </footer>
-
-    <script>
-        document.getElementById("currentYear").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
-    <script src="scripts/scripts.js" defer></script>
+          <p> Last modified: <span id="lastModified"></span></p>
+          <script>
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = document.lastModified;
+        </script>
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-logo.jpg" alt="Facebook"></a>
+          <a href="#"><img src="images/instagram logo.jpg" alt="Instagram"></a>
+          <a href="#"><img src="images/Twitter.png" alt="Twitter"></a>
+        </div>
+      </footer>
 </body>
 </html>

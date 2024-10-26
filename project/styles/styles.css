@@ -123,6 +123,7 @@ h2 {
     color: #333333;
 }
 
+
 form input, form textarea, form button {
     width: 100%;
     margin: 8px 0;
@@ -140,7 +141,6 @@ form button {
 
 form button:hover {
     background-color:#218838;
-    color: #333333;
 }
 
 ul {
@@ -148,81 +148,81 @@ ul {
     padding: 0;
 }
 
-  .navbar ul {
+.navbar ul {
     display: flex;
     list-style: none;
     padding: 0;
     background-color: #28a745;
-  }
+}
   
-  .navbar li {
+.navbar li {
     margin: 0 10px;
-  }
+}
   
-  .navbar a {
+.navbar a {
     color: #f5f5f5;
     text-decoration: none;
-  }
+}
   
   /* Hero Section */
-  .hero {
+.hero {
     text-align: center;
     padding: 50px 20px;
     background-color: #f5f5f5;
-  }
+}
   
-  .cta-button {
+.cta-button {
     background-color: #28a745;
     color: #f5f5f5;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-  }
+}
   
   /* Meal Plans Section */
-  .meal-plans {
+.meal-plans {
     padding: 20px;
     text-align: center;
-  }
+}
   
-  .meal-grid {
+.meal-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
+}
   
-  .meal-card {
+.meal-card {
     border: 1px solid #333333;
     padding: 15px;
     width: 30%;
-  }
+}
   
   /* Testimonials Section */
-  .testimonials blockquote {
+.testimonials blockquote {
     font-style: italic;
     text-align: center;
     padding: 10px 20px;
-  }
+}
   
   /* Footer */
-  .footer {
+.footer {
     text-align: center;
     padding: 10px;
     background-color: #28a745;
     color: #f5f5f5;
-  }
-  .footer-links a {
+}
+.footer-links a {
     text-align: center;
     padding: 10px;
     background-color: #28a745;
     color: #f5f5f5;
-  }
+}
 
-  .social-icons img {
+.social-icons img {
     width: 20px;
     margin: 0 5px;
-  }
-  article h3 {
+}
+article h3 {
     color: #28a745;
     margin-top: 15px;
 }
