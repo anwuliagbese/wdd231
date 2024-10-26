@@ -82,3 +82,8 @@ function displaySupportTeam() {
 
     supportContainer.innerHTML = teamHTML;
 }
+window.toggleMenu = function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  };
+  
