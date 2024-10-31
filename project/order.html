@@ -3,64 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Meals - HealthyBites</title>
+    <title>Healthy Catering - Order</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Order Your Meal</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="order.html">Order Meals</a>
-            <a href="Blog.html">Blog</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section>
-        <form id="orderForm">
+    <!-- Order Form -->
+    <section id="order-form">
+        <h2>Order Now</h2>
+        <form id="mealOrderForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="meal">Select Meal:</label>
-            <select id="meal" name="meal" required>
-                <option value="beansPlantain">Beans and Plantain</option>
-                <option value="grilledChicken">Grilled Chicken</option>
-                <option value="jollofRice">Jollof Rice</option>
-                <option value="friedRice">Fried Rice</option>
-                <option value="poundedYam">Pounded Yam and Egusi Soup</option>
-                <option value="amalaEwedu">Amala and Ewedu Soup</option>
-                <option value="ofadaRice">Ofada Rice and Ayamase</option>
-                <option value="moiMoi">Moi Moi</option>
-                <option value="pepperSoup">Goat Meat Pepper Soup</option>
-                <option value="suya">Suya</option>
-                <option value="fufu">Fufu and Vegetable Soup</option>
-                <option value="icecream">Ice Cream</option>
+            <input type="text" id="name" required>
+            
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType">
+                <option value="local">Local Dish</option>
+                <option value="continental">Continental Dish</option>
+                <option value="low-carb">Low Carb</option>
+                <option value="dessert">Dessert</option>
             </select>
-
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1" required>
-
-            <button type="submit">Submit Order</button>
+            
+            <label for="deliveryDate">Delivery Date:</label>
+            <input type="date" id="deliveryDate" required>
+            
+            <button type="submit">Place Order</button>
         </form>
     </section>
-    <footer class="footer">
-        <div class="footer-links">
-          <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024  Onyx Healthy Catering Services | Abuja, Nigeria</p>
+        <p>Contact us: Onyx@healthycatering.com | +234-123-4567</p>
+        <div class="social-media">
+            <a href="images/facebook-logo.jpg"target="_blank">Facebook</a> |
+            <a href="images/instagram logo.jpg" target="_blank">Instagram</a> |
+            <a href="images/Twitter.png" target="_blank">Twitter</a>
         </div>
-      
-        <p>Onyx Healthy Bites. All Rights Reserved.</p>
-        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
-          <p> Last modified: <span id="lastModified"></span></p>
-          <script>
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
-            document.getElementById("lastModified").textContent = document.lastModified;
-        </script>
-        <div class="social-icons">
-          <a href="#"><img src="images/facebook-logo.jpg" alt="Facebook"></a>
-          <a href="#"><img src="images/instagram logo.jpg" alt="Instagram"></a>
-          <a href="#"><img src="images/Twitter.png" alt="Twitter"></a>
-        </div>
-      </footer>
+    </div>
+</footer>
+
+    <script src="scripts/scripts.js" defer></script>
 </body>
 </html>

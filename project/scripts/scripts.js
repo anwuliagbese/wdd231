@@ -1,89 +1,80 @@
-// Ensure all functions execute only after the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initWelcomeMessage();
-    loadBlogPosts();
-    toggleDarkMode();
-    displaySupportTeam();
-});
+// Function to handle form submission and save order to localStorage
+function handleFormSubmit(event) {
+    event.preventDefault();  // Prevent page from refreshing on form submission
 
-// 1. Dynamic Welcome Message Based on Time of Day and Stored User Name
-function initWelcomeMessage() {
-    const welcomeMsg = document.getElementById('welcome-message');
-    const userName = localStorage.getItem('userName') || 'Guest';
+    // Select and retrieve form values
+    const name = document.getElementById('name').value;
+    const mealType = document.getElementById('mealType').value;
+    const deliveryDate = document.getElementById('deliveryDate').value;
 
-    const hour = new Date().getHours();
-    const greeting = (hour < 12) ? 'Good Morning' : 
-                     (hour < 18) ? 'Good Afternoon' : 'Good Evening';
-
-    welcomeMsg.textContent = `${greeting}, ${userName}! Welcome to our site.`;
-}
-
-// 2. Array of Blog Posts (Objects) with Dynamic Rendering
-const blogPosts = [
-    { title: '5 Tips for Healthy Eating', date: '2024-10-01', content: 'Learn easy ways to eat healthy every day.' },
-    { title: 'How to Stay Active at Work', date: '2024-10-10', content: 'Simple ways to move more during work hours.' },
-    { title: 'The Benefits of Green Vegetables', date: '2024-10-15', content: 'Discover why green veggies are essential.' }
-];
-
-function loadBlogPosts() {
-    const blogContainer = document.getElementById('blog-posts');
-    if (!blogContainer) return;
-
-    const postsHTML = blogPosts.map(post => `
-        <div class="card">
-            <h2>${post.title}</h2>
-            <p><small>${post.date}</small></p>
-            <p>${post.content}</p>
-        </div>
-    `).join('');
-
-    blogContainer.innerHTML = postsHTML;
-}
-
-
-
-// 4. Dark Mode Toggle with State Persistence via LocalStorage
-function toggleDarkMode() {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-
-    if (!darkModeToggle) return;
-
-    const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
-    if (isDarkModeEnabled) {
-        body.classList.add('dark-mode');
-        darkModeToggle.textContent = 'Light Mode';
+    // Conditional logic for form validation
+    if (!name || !mealType || !deliveryDate) {
+        alert("Please fill in all fields before submitting.");
+        return;
     }
 
-    darkModeToggle.addEventListener('click', () => {
-        const darkModeActive = body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', darkModeActive);
-        darkModeToggle.textContent = darkModeActive ? 'Light Mode' : 'Dark Mode';
+    // Create an order object and store in localStorage
+    const order = {
+        name,
+        mealType,
+        deliveryDate
+    };
+    localStorage.setItem("latestOrder", JSON.stringify(order));
+
+    // Confirmation message
+    alert(`Thank you, ${name}! Your order for a ${mealType} meal has been placed.`);
+    document.getElementById('mealOrderForm').reset();  // Clear form after submission
+}
+
+// Function to display saved order data on page load (if exists in localStorage)
+function displayPreviousOrder() {
+    const savedOrder = JSON.parse(localStorage.getItem("latestOrder"));
+    if (savedOrder) {
+        const orderMessage = `Your last order was a ${savedOrder.mealType} meal for ${savedOrder.name}, scheduled for delivery on ${savedOrder.deliveryDate}.`;
+        document.getElementById('order-summary').textContent = orderMessage;
+    }
+}
+
+// Menu data array with objects and display function
+const menuItems = [
+    { name: "Local Dish", description: "Traditional dishes with a healthy twist.", price: "$10" },
+    { name: "Continental Dish", description: "Balanced, delicious international meals.", price: "$15" },
+    { name: "Low-Carb Option", description: "Low-carb meals to suit your diet.", price: "$12" },
+    { name: "Protein-Rich", description: "High-protein meals for active lifestyles.", price: "$13" }
+];
+
+// Function to render menu items dynamically
+function displayMenu() {
+    const menuContainer = document.getElementById("menu-container");
+    menuItems.forEach(item => {
+        const menuItemElement = document.createElement("div");
+        menuItemElement.className = "menu-item";
+        menuItemElement.innerHTML = `
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <p>Price: ${item.price}</p>
+        `;
+        menuContainer.appendChild(menuItemElement);
     });
 }
 
-// 5. Customer Support Team Section Display with Array of Objects
-const supportTeam = [
-    { name: 'Mr. Theophilus', role: 'Customer Support Manager' },
-    { name: 'Mrs.Lois Chioma', role: 'Administrative assistant' },
-    { name: 'Adoram Tom', role: 'IT Officer' }
-];
+// Event listener for form submission
+document.getElementById('mealOrderForm').addEventListener('submit', handleFormSubmit);
 
-function displaySupportTeam() {
-    const supportContainer = document.getElementById('support-team');
-    if (!supportContainer) return;
+// Call displayPreviousOrder on page load to show past orders
+window.addEventListener("load", displayPreviousOrder);
 
-    const teamHTML = supportTeam.map(member => `
-        <div class="support-card">
-            <h3>${member.name}</h3>
-            <p>${member.role}</p>
-        </div>
-    `).join('');
-
-    supportContainer.innerHTML = teamHTML;
+// Call displayMenu to show menu items on the menu page
+if (document.getElementById("menu-container")) {
+    displayMenu();
 }
-window.toggleMenu = function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-  };
-  
+
+// Social media link hover effects
+document.querySelectorAll(".social-media a").forEach(link => {
+    link.addEventListener("mouseover", () => {
+        link.style.color = "#45a049";  // Change color on hover
+    });
+    link.addEventListener("mouseout", () => {
+        link.style.color = "#fff";     // Reset color
+    });
+});

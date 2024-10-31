@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onyx Healthy Bites - Menu</title>
+    <title>Onyx Healthy Catering - Menu</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Onyx Healthy Bites</div>
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="reviews.html">Reviews & FAQ</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="menu">
-        <h2>Explore Our Menu</h2>
-        <div class="menu-cards">
-            <div class="menu-card">Local Dishes</div>
-            <img src="images/Local dish.jpg" alt="Healthy food banner" loading="lazy">
-            <div class="menu-card">Continental Dishes</div>
-            <img src="images/continental dish.jpg" alt="Healthy food banner" loading="lazy">
-            <div class="menu-card">Low-Carb Options</div>
-            <img src="images/low-carb.jpg" alt="Healthy food banner" loading="lazy">
-            <div class="menu-card">Protein-Rich Meals</div>
-            <img src="images/Nigerian-Beans-Porridge.jpg" alt="Healthy food banner" loading="lazy">
-            <div class="menu-card">Desserts</div>
-            <img src="images/Dessert.jpg" alt="Healthy food banner" loading="lazy">
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <!-- Menu items with images and descriptions -->
+            <div class="menu-item">
+                <img src="images/Local dish.jpg" alt="Local Dishes">
+                <h3>Local Dishes</h3>
+                <p>A selection of traditional dishes with a healthy twist.</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/continental dish.jpg" alt="Continental Dishes">
+                <h3>Continental Dishes</h3>
+                <p>Delicious international meals for a balanced diet.</p>
+            </div>
+            <div class="menu-item">
+              <img src="images/Dessert.jpg" alt="Dessert">
+              <h3>Low-carb</h3>
+              <p>Healthy dessert for a balanced diet.</p>
+          </div>
+          <div class="menu-item">
+            <img src="images/low-carb.jpg" alt="Low-carb">
+            <h3>Low-carb</h3>
+            <p>Delicious low-carb meals for a balanced diet.</p>
+            </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-links">
-          <a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
-        </div>
-      
-        <p>Onyx Healthy Bites. All Rights Reserved.</p>
-        <p>&copy; <span id="currentYear"></span>| Anwuli Joyce Agbese, Nigeria</p>
-          <p> Last modified: <span id="lastModified"></span></p>
-          <script>
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
-            document.getElementById("lastModified").textContent = document.lastModified;
-        </script>
-        <div class="social-icons">
-          <a href="#"><img src="images/facebook-logo.jpg" alt="Facebook"></a>
-          <a href="#"><img src="images/instagram logo.jpg" alt="Instagram"></a>
-          <a href="#"><img src="images/Twitter.png" alt="Twitter"></a>
-        </div>
-      </footer>
-    <script src="scripts/scripts.js"defer></script>
+<!-- Footer Section -->
+<footer>
+  <div class="footer-content">
+      <p>&copy; 2024 Onyx Healthy Catering Services | Abuja, Nigeria</p>
+      <p>Contact us: Onyx@healthycatering.com | +234-123-4567</p>
+      <div class="social-media">
+          <a href="images/facebook-logo.jpg" target="_blank">Facebook</a> |
+          <a href="images/instagram logo.jpg" target="_blank">Instagram</a> |
+          <a href="images/Twitter.png" target="_blank">Twitter</a>
+      </div>
+  </div>
+</footer>
 
+    <script src="scripts/scripts.js" defer></script>
 </body>
 </html>
