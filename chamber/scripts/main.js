@@ -1,41 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const memberDirectory = document.getElementById("member-directory");
-  const gridViewBtn = document.getElementById("grid-view");
-  const listViewBtn = document.getElementById("list-view");
-  const yearSpan = document.getElementById("year");
-  const lastModifiedSpan = document.getElementById("last-modified");
+    const memberDirectory = document.getElementById("member-directory");
+    const gridViewBtn = document.getElementById("grid-view");
+    const listViewBtn = document.getElementById("list-view");
 
-  // Display current year
-  yearSpan.textContent = new Date().getFullYear();
+    // Fetch and display members
+    async function fetchMembers() {
+        try {
+            const response = await fetch("data/members.json");
+            const members = await response.json();
+            displayMembers(members, "grid");
+        } catch (error) {
+            console.error("Error fetching members:", error);
+        }
+    }
 
-  // Display last modified date
-  lastModifiedSpan.textContent = document.lastModified;
+    // Display members in the specified view
+    function displayMembers(members, view) {
+        memberDirectory.innerHTML = ""; // Clear current content
+        memberDirectory.className = view; // Set view class (grid or list)
 
-  // Fetch and display members
-  fetch("data/members.json")
-      .then(response => response.json())
-      .then(data => {
-          data.forEach(member => {
-              const card = document.createElement("div");
-              card.classList.add("member-card");
-              card.innerHTML = `
-                  <img src="images/${member.image}" alt="${member.name}">
-                  <h3>${member.name}</h3>
-                  <p>${member.address}</p>
-                  <a href="${member.website}" target="_blank">Visit Website</a>
-              `;
-              memberDirectory.appendChild(card);
-          });
-      });
+        members.forEach(member => {
+            const card = document.createElement("div");
+            card.classList.add("member-card");
 
-  // Toggle between grid and list views
-  gridViewBtn.addEventListener("click", () => {
-      memberDirectory.classList.remove("list");
-      memberDirectory.classList.add("grid");
-  });
+            card.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name}">
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>Phone: ${member.phone}</p>
+                <a href="${member.website}" target="_blank">Visit Website</a>
+                <p class="membership-level">Membership Level: ${getMembershipLevel(member.membershipLevel)}</p>
+            `;
 
-  listViewBtn.addEventListener("click", () => {
-      memberDirectory.classList.remove("grid");
-      memberDirectory.classList.add("list");
-  });
+            memberDirectory.appendChild(card);
+        });
+    }
+
+    // Get membership level text
+    function getMembershipLevel(level) {
+        switch (level) {
+            case 1: return "Member";
+            case 2: return "Silver";
+            case 3: return "Gold";
+            default: return "Unknown";
+        }
+    }
+
+    // Toggle between grid and list views
+    gridViewBtn.addEventListener("click", () => {
+        fetchMembers().then(() => memberDirectory.classList.add("grid"));
+    });
+
+    listViewBtn.addEventListener("click", () => {
+        fetchMembers().then(() => memberDirectory.classList.add("list"));
+    });
+
+    // Initial fetch and display in grid view
+    fetchMembers();
 });

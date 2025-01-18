@@ -14,5 +14,45 @@
       "website": "http://deserttech.com",
       "image": "desert-tech.jpg",
       "membershipLevel": 3
-  }
+  },
+{
+  "name": "Joyce bites",
+  "address": "789 Jason Blvd, Abuja",
+  "phone": "555-555-5555",
+  "website": "http://joycebites.com",
+  "image": "joyce- bites.jpg",
+  "membershipLevel": 3
+},
+{
+  "name": "Nutty-cracker Crafts",
+  "address": "151 oblong Way, yenegoa",
+  "phone": "070-382-5678",
+  "website": "http://nuttycrackercrafts.com",
+  "image": "nomad-crafts.jpg",
+  "membershipLevel": 1
+},
+{
+  "name": "Ocean Bank",
+  "address": "452 Palm Street, Lagos",
+  "phone": "081-387-1674",
+  "website": "http://oceanbank.com",
+  "image": "ocean-bank.jpg",
+  "membershipLevel": 3
+},
+{
+  "name": "Agbese Fitness",
+  "address": "35 Wellness Avenue, Ikot Ekpene",
+  "phone": "070-653-7890",
+  "website": "http://agbesefitness.com",
+  "image": "fitness.jpg",
+  "membershipLevel": 2
+},
+{
+  "name": "four points Hotel",
+  "address": "25Luxury Road, Ikot Ekpene",
+  "phone": "091-362-5678",
+  "website": "http://fourpointsshotel.com",
+  "image": "four-points.jpg",
+  "membershipLevel": 3
+}
 ]
