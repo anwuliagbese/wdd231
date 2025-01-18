@@ -1,62 +1,85 @@
+/* Normalize */
+@import url('normalize.css');
+
+/* Base Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    background-color: #005f73;
-    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: lightgray;
     padding: 1rem;
     text-align: center;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    
+}
+ /* Navigation Links */
+nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .active {
+    padding: 0.5rem 1rem;
+    color: #000000; /* Default color */
+    transition: color 0.3s ease;
+}
+
+nav ul li a.home {
+    color: #000000; /* Home */
+}
+
+nav ul li a.directory {
+    color: #000000; /* Directory */
+}
+
+nav ul li a.events {
+    color: #000000; /* Events */
+}
+
+nav ul li a.about {
+    color: #000000; /* About Us */
+}
+
+/* Optional hover effect */
+nav ul li a:hover {
     text-decoration: underline;
-  }
-  
-  .layout-toggle {
-    text-align: center;
-    margin: 1rem 0;
-  }
-  
-  #memberDirectory {
+}
+
+main {
+    padding: 1rem;
+}
+
+#view-toggle {
+    margin-bottom: 1rem;
+}
+
+#member-directory {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
-    padding: 1rem;
-  }
-  
-  #memberDirectory.list-view {
+}
+
+#member-directory.list {
     display: block;
-  }
-  
-  .member-card {
+}
+
+.member-card {
     border: 1px solid #ccc;
-    border-radius: 8px;
     padding: 1rem;
     text-align: center;
-  }
-  
-  footer {
-    background-color: #005f73;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
+    background: #fff;
+}
+footer {
+  background: lightgray;
+  padding: 1rem;
+  text-align: center;
+}

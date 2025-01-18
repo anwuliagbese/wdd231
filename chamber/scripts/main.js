@@ -1,35 +1,41 @@
-// Dynamically set copyright year and last modified date
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+document.addEventListener("DOMContentLoaded", () => {
+  const memberDirectory = document.getElementById("member-directory");
+  const gridViewBtn = document.getElementById("grid-view");
+  const listViewBtn = document.getElementById("list-view");
+  const yearSpan = document.getElementById("year");
+  const lastModifiedSpan = document.getElementById("last-modified");
 
-// Fetch member data and display it
-const fetchMembers = async () => {
-  const response = await fetch("data/members.json");
-  const members = await response.json();
-  const directory = document.getElementById("memberDirectory");
+  // Display current year
+  yearSpan.textContent = new Date().getFullYear();
 
-  members.forEach((member) => {
-    const memberCard = document.createElement("div");
-    memberCard.classList.add("member-card");
-    memberCard.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
-    `;
+  // Display last modified date
+  lastModifiedSpan.textContent = document.lastModified;
 
-    directory.appendChild(memberCard);
+  // Fetch and display members
+  fetch("data/members.json")
+      .then(response => response.json())
+      .then(data => {
+          data.forEach(member => {
+              const card = document.createElement("div");
+              card.classList.add("member-card");
+              card.innerHTML = `
+                  <img src="images/${member.image}" alt="${member.name}">
+                  <h3>${member.name}</h3>
+                  <p>${member.address}</p>
+                  <a href="${member.website}" target="_blank">Visit Website</a>
+              `;
+              memberDirectory.appendChild(card);
+          });
+      });
+
+  // Toggle between grid and list views
+  gridViewBtn.addEventListener("click", () => {
+      memberDirectory.classList.remove("list");
+      memberDirectory.classList.add("grid");
   });
-};
 
-fetchMembers();
-
-// Toggle between grid and list view
-document.getElementById("gridView").addEventListener("click", () => {
-  document.getElementById("memberDirectory").classList.remove("list-view");
-});
-
-document.getElementById("listView").addEventListener("click", () => {
-  document.getElementById("memberDirectory").classList.add("list-view");
+  listViewBtn.addEventListener("click", () => {
+      memberDirectory.classList.remove("grid");
+      memberDirectory.classList.add("list");
+  });
 });
