@@ -1,49 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Directory of local businesses supported by the Agbese Chamber of Commerce.">
-    <meta name="author" content="Anwuli Joyce Agbese">
-    <meta property="og:title" content="Agbese Chamber of Commerce - Directory">
+    <meta name="description" content="Directory page for the Chamber project.">
+    <meta name="author" content="Your Name">
+    <title>Chamber Directory</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Chamber Directory">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://anwuliagbese.github.io/wdd231/chamber/directory.html/images/placeholder.jpg">
-    <meta property="og:url" content="https://anwuliagbese.github.io/wdd231/chamber/directory.html">
-    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:image" content="images/social-image.jpg">
+    <meta property="og:url" content="http://yourwebsite.com/chamber/directory.html">
+
+    <!-- Link Normalize CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Agbese Chamber of Commerce - Directory</title>
 </head>
-
 <body>
     <header>
-        <h1>Agbese Chamber of Commerce</h1>
         <nav>
             <ul>
-                <li><a href="index.html" class="home">Home</a></li>
-                <li><a href="directory.html" class="directory">Directory</a></li>
-                <li><a href="events.html" class="events">Events</a></li>
-                <li><a href="about.html" class="about">About Us</a></li>
+                <li><a href="index.html">Index</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <h2>Business Directory</h2>
-        <div id="view-toggle">
-            <button id="grid-view">Grid View</button>
-            <button id="list-view">List View</button>
-        </div>
-        <section id="member-directory" class="grid"></section>
+        <section id="directory">
+            <h1>Member Directory</h1>
+            <div id="view-toggle">
+                <button id="grid-view">Grid View</button>
+                <button id="list-view">List View</button>
+            </div>
+            <div id="members" class="grid"></div>
+        </section>
     </main>
-
     <footer>
-        <p>&copy; <span id="year"></span> Agbese Chamber of Commerce</p>
-        <p>Developed by Anwuli Joyce Agbese | WDD 231 | Last Modified: <span id="last-modified"></span></p>
+        <p>Contact us: jaagbese@gmail.com | Phone: (803) 822-2425</p>
+        <p>&copy; <span id="year"></span> | Anwuli Joyce Agbese | WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
     </footer>
 
     <script src="scripts/main.js"></script>
 </body>
-
 </html>
