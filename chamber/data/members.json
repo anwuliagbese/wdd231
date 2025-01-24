@@ -54,5 +54,36 @@
   "website": "http://fourpointsshotel.com",
   "image": "four-points.jpg",
   "membershipLevel": 3
-}
+},
+
+  {
+    "name": "John Mensah",
+    "membership": "gold",
+    "image": "john_mensah.jpg",
+    "bio": "Expert in financial planning."
+  },
+  {
+    "name": "Jane Awele",
+    "membership": "silver",
+    "image": "jane_awele.jpg",
+    "bio": "Marketing specialist with 10 years of experience."
+  },
+  {
+    "name": "Alice Bryson",
+    "membership": "bronze",
+    "image": "alice_bryson.jpg",
+    "bio": "Tech enthusiast and web developer."
+  },
+  {
+    "name": "Bob Chidi",
+    "membership": "gold",
+    "image": "bob_chidi.jpg",
+    "bio": "Experienced business consultant."
+  },
+  {
+    "name": "Charlie Vinson",
+    "membership": "silver",
+    "image": "charlie_vinson.jpg",
+    "bio": "Innovative product manager."
+  }
 ]

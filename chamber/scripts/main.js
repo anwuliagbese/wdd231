@@ -43,3 +43,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial fetch with grid view
     fetchMembers("grid");
 });
+
+
+// Fetch and display randomly selected members
+function displayRandomMembers() {
+    fetch('members.json') // Path to your JSON file
+      .then(response => response.json())
+      .then(data => {
+        // Filter members with gold or silver memberships
+        const eligibleMembers = data.filter(member => 
+          member.membership === 'gold' || member.membership === 'silver'
+        );
+  
+        // Shuffle members and select 2–3 randomly
+        const selectedMembers = eligibleMembers
+          .sort(() => Math.random() - 0.5) // Shuffle the array
+          .slice(0, Math.floor(Math.random() * 2) + 2); // Select 2–3 members
+  
+        // Render selected members to the DOM
+        const membersContainer = document.getElementById('spotlights');
+        membersContainer.innerHTML = selectedMembers.map(member => `
+          <div class="spotlight-container">
+            <img src="${member.image}" alt="${member.name}" class="member-image">
+            <h3>${member.name}</h3>
+            <p>${member.bio}</p>
+            <span class="membership-level">${member.membership.toUpperCase()} Member</span>
+          </div>
+        `).join('');
+      })
+      .catch(error => console.error('Error fetching members data:', error));
+  }
+  
+  // Call the function on page load
+  document.addEventListener('DOMContentLoaded', displayRandomMembers);
+  
