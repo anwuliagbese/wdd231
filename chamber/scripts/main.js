@@ -45,35 +45,44 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Fetch and display randomly selected members
-function displayRandomMembers() {
-    fetch('members.json') // Path to your JSON file
-      .then(response => response.json())
+// Function to load and display featured members
+function loadFeaturedMembers() {
+    const dataPath = 'members.json'; // Path to the JSON file
+  
+    fetch(dataPath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.statusText}`);
+        }
+        return response.json();
+      })
       .then(data => {
-        // Filter members with gold or silver memberships
+        // Filter gold and silver members
         const eligibleMembers = data.filter(member => 
           member.membership === 'gold' || member.membership === 'silver'
         );
   
-        // Shuffle members and select 2–3 randomly
+        // Shuffle and select 2–3 members randomly
         const selectedMembers = eligibleMembers
-          .sort(() => Math.random() - 0.5) // Shuffle the array
-          .slice(0, Math.floor(Math.random() * 2) + 2); // Select 2–3 members
+          .sort(() => Math.random() - 0.5) // Shuffle members
+          .slice(0, Math.floor(Math.random() * 2) + 2); // Pick 2–3 members
   
-        // Render selected members to the DOM
-        const membersContainer = document.getElementById('spotlights');
-        membersContainer.innerHTML = selectedMembers.map(member => `
-          <div class="spotlight-container">
-            <img src="${member.image}" alt="${member.name}" class="member-image">
+        // Render the selected members into the HTML
+        const spotlightContainer = document.querySelector('.spotlight-container');
+        spotlightContainer.innerHTML = selectedMembers.map(member => `
+          <div class=".spotlight-container">
+            <img src="${member.image}" alt="${member.name}" class="member-photo">
             <h3>${member.name}</h3>
             <p>${member.bio}</p>
             <span class="membership-level">${member.membership.toUpperCase()} Member</span>
           </div>
         `).join('');
       })
-      .catch(error => console.error('Error fetching members data:', error));
+      .catch(error => {
+        console.error('Error fetching members:', error);
+      });
   }
   
-  // Call the function on page load
-  document.addEventListener('DOMContentLoaded', displayRandomMembers);
+  // Run the function after the DOM is loaded
+  document.addEventListener('DOMContentLoaded', loadFeaturedMembers);
   
