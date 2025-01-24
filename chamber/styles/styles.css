@@ -70,6 +70,64 @@ main {
     height: auto;
     border-radius: 4px;
 }
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.cta-button {
+    color: white; /* Change text color to white */
+    padding: 10px 20px; /* Optional: Add padding to the button */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
+  
+  
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* Events Section */
+.events {
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+/* Weather Section */
+.weather {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Spotlights Section */
+.spotlights {
+    padding: 2rem;
+    background: #f1f1f1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.spotlight-container .spotlight {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
 footer p {
     margin: 0.5rem 0;
 }
