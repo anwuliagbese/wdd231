@@ -121,5 +121,13 @@ function loadFeaturedMembers() {
         document.getElementById(id).style.display = "none";
     };
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+  });
+});
 
   
