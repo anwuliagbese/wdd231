@@ -85,4 +85,41 @@ function loadFeaturedMembers() {
   
   // Run the function after the DOM is loaded
   document.addEventListener('DOMContentLoaded', loadFeaturedMembers);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Set timestamp when form loads
+    document.getElementById("timestamp").value = new Date().toISOString();
+
+    // Membership Card Animation on Load
+    const cards = document.querySelectorAll(".membership-card");
+    let delay = 200;
+    cards.forEach(card => {
+        setTimeout(() => {
+            card.classList.add("show");
+        }, delay);
+        delay += 200; // Staggered animation
+    });
+
+    // Form Validation
+    document.querySelector("form").addEventListener("submit", function (event) {
+        const orgTitle = document.querySelector("input[name='org-title']");
+        const titlePattern = /^[A-Za-z- ]{7,}$/;
+        
+        if (!titlePattern.test(orgTitle.value)) {
+            alert("Organization title must be at least 7 characters and only contain letters, hyphens, and spaces.");
+            orgTitle.focus();
+            event.preventDefault();
+        }
+    });
+
+    // Modal Handling
+    window.openModal = function(id) {
+        document.getElementById(id).style.display = "block";
+    };
+
+    window.closeModal = function(id) {
+        document.getElementById(id).style.display = "none";
+    };
+});
+
   
