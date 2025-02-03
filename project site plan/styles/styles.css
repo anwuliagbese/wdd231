@@ -1,0 +1,460 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* Ensure Consistent Spacing & Alignment */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Prevent Horizontal Scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Flexbox Layout for Better Alignment */
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Image Scaling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    padding: 15px 20px;
+}
+
+nav .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background: #002050;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #004080;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #002050;
+}
+
+/* Membership Cards */
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.membership-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+/* Animation to fade in membership cards */
+.membership-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal-content {
+    position: relative;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* Logo and title */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+main {
+    padding: 1rem;
+}
+
+#view-toggle {
+    margin: 1rem 0;
+}
+
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+#members.list {
+    display: block;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.cta-button {
+    color: white; /* Change text color to white */
+    padding: 10px 20px; /* Optional: Add padding to the button */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Optional: Add rounded corners */
+  }
+  
+  .spotlights {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .spotlight-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .member-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .membership-level {
+    font-weight: bold;
+    color: #666;
+  }
+  
+  
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* Events Section */
+.events {
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+/* Weather Section */
+.weather {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Spotlights Section */
+.spotlights {
+    padding: 2rem;
+    background: #f1f1f1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.spotlight-container .spotlight {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Confirmation Section */
+.confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Confirmation Details */
+.confirmation h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.confirmation p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.confirmation span {
+    font-weight: bold;
+    color: #002050;
+}
+
+/* Back to Home Button */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #004080;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px
+}
+
+.back-button:hover {
+    background-color: #002050;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+footer p {
+    margin: 0.5rem 0;
+}
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu-items {
+      display: block;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  /* Desktop View */
+  @media (min-width: 769px) {
+    .menu-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
