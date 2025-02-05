@@ -46,6 +46,64 @@
     text-decoration: underline; /* Underline links on hover */
   }
   
+  nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for larger screens */
+@media (min-width: 641px) {
+    .card img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.grid-container {
+  grid-template-areas: 
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+}
+
+.grid-container {
+  grid-template-areas: 
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+}
+
   /* Main Content Section */
   section {
     padding: 30px;
