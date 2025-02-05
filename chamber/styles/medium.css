@@ -1,0 +1,35 @@
+/* medium.css */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+
+    .grid-item {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9f9f9;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .grid-item:hover {
+        transform: scale(1.05);
+    }
+
+    .visit-message {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
