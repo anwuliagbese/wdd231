@@ -171,3 +171,26 @@ export const menuData = [
 
     localStorage.setItem("lastVisit", now);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+  const navLinks = document.querySelectorAll("nav ul li a");
+
+  navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active"); // Add active class
+      }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const visitMessage = document.getElementById("visit-message");
+  let lastVisit = localStorage.getItem("lastVisit");
+
+  if (lastVisit) {
+      visitMessage.textContent = `Welcome back! Your last visit was on ${lastVisit}`;
+  } else {
+      visitMessage.textContent = "Welcome to the Discover page!";
+  }
+
+  localStorage.setItem("lastVisit", new Date().toLocaleDateString());
+});

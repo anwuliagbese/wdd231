@@ -98,6 +98,26 @@ nav ul li {
       "card7 card8";
 }
 
+input, textarea {
+  padding: 10px;
+}
+
+nav ul li a.active {
+  color: red;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: red; /* Change color to highlight active page */
+  font-weight: bold;
+  border-bottom: 2px solid red; /* Optional: Adds an underline */
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
 .grid-container {
   grid-template-areas: 
       "card1 card2 card3 card4"
