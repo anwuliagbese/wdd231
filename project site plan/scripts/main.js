@@ -194,3 +194,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   localStorage.setItem("lastVisit", new Date().toLocaleDateString());
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+  const navLinks = document.querySelectorAll("nav ul li a");
+
+  navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active"); // Add active class
+      }
+  });
+});
