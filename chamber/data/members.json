@@ -1,8 +1,9 @@
 [
     {
       "name": "Yankari Games Reserve",
-      "address": "Yankari National park",
-      "image": "Yankari_National_Park(1).webp",
+      "address": "Yankari National park, Bauchi State",
+      "description": "Yankari Game Reserve is a wildlife park in Nigeria that's home to a variety of animals and plants. It's located in Bauchi State in the northeast of the country.",
+      "image": "images/Yankari Games Reserve.webp",
       "membership": 3
     },
     {
