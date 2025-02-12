@@ -1,89 +1,30 @@
 [
   {
-      "name": "Agbese Boutique",
-      "address": "123 Market St.",
-      "phone": "555-123-4567",
-      "website": "http://Agbeseboutique.com",
-      "image": "boutique.jpg",
-      "membershipLevel": 2
+      "title": "Historic Downtown",
+      "image": "images/downtown.webp",
+      "address": "123 Main St, City",
+      "description": "Explore historic buildings, shops, and cafes.",
+      "link": "#"
   },
   {
-      "name": "Desert Tech Solutions",
-      "address": "456 Sahara Ave.",
-      "phone": "555-987-6543",
-      "website": "http://deserttech.com",
-      "image": "desert-tech.jpg",
-      "membershipLevel": 3
-  },
-{
-  "name": "Joyce bites",
-  "address": "789 Jason Blvd, Abuja",
-  "phone": "555-555-5555",
-  "website": "http://joycebites.com",
-  "image": "joyce- bites.jpg",
-  "membershipLevel": 3
-},
-{
-  "name": "Nutty-cracker Crafts",
-  "address": "151 oblong Way, yenegoa",
-  "phone": "070-382-5678",
-  "website": "http://nuttycrackercrafts.com",
-  "image": "nomad-crafts.jpg",
-  "membershipLevel": 1
-},
-{
-  "name": "Ocean Bank",
-  "address": "452 Palm Street, Lagos",
-  "phone": "081-387-1674",
-  "website": "http://oceanbank.com",
-  "image": "ocean-bank.jpg",
-  "membershipLevel": 3
-},
-{
-  "name": "Agbese Fitness",
-  "address": "35 Wellness Avenue, Ikot Ekpene",
-  "phone": "070-653-7890",
-  "website": "http://agbesefitness.com",
-  "image": "fitness.jpg",
-  "membershipLevel": 2
-},
-{
-  "name": "four points Hotel",
-  "address": "25Luxury Road, Ikot Ekpene",
-  "phone": "091-362-5678",
-  "website": "http://fourpointsshotel.com",
-  "image": "four-points.jpg",
-  "membershipLevel": 3
-},
-
-  {
-    "name": "John Mensah",
-    "membership": "gold",
-    "image": "john_mensah.jpg",
-    "bio": "Expert in financial planning."
+      "title": "City Park",
+      "image": "images/park.webp",
+      "address": "456 Greenway Rd",
+      "description": "Enjoy walking trails, playgrounds, and picnic areas.",
+      "link": "#"
   },
   {
-    "name": "Jane Awele",
-    "membership": "silver",
-    "image": "jane_awele.jpg",
-    "bio": "Marketing specialist with 10 years of experience."
+      "title": "Museum of History",
+      "image": "images/museum.webp",
+      "address": "789 Heritage Ln",
+      "description": "Discover the rich history of our town.",
+      "link": "#"
   },
   {
-    "name": "Alice Bryson",
-    "membership": "bronze",
-    "image": "alice_bryson.jpg",
-    "bio": "Tech enthusiast and web developer."
-  },
-  {
-    "name": "Bob Chidi",
-    "membership": "gold",
-    "image": "bob_chidi.jpg",
-    "bio": "Experienced business consultant."
-  },
-  {
-    "name": "Charlie Vinson",
-    "membership": "silver",
-    "image": "charlie_vinson.jpg",
-    "bio": "Innovative product manager."
+      "title": "Community Theater",
+      "image": "images/theater.webp",
+      "address": "321 Performance Ave",
+      "description": "Watch amazing local performances and shows.",
+      "link": "#"
   }
 ]
