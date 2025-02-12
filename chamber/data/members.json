@@ -3,16 +3,13 @@
       "name": "Yankari Games Reserve",
       "address": "Yankari National park, Bauchi State",
       "description": "Yankari Game Reserve is a wildlife park in Nigeria that's home to a variety of animals and plants. It's located in Bauchi State in the northeast of the country.",
-      "image": "images/Yankari Games Reserve.webp",
-      "membership": 3
+      "image": "images/Yankari Games Reserve.webp"
     },
     {
-      "name": "Elite Event Planners",
-      "address": "456 Elm Street, Townsville",
-      "phone": "(987) 654-3210",
-      "website": "https://eliteevents.com",
-      "image": "elite-events.webp",
-      "membership": 2
+      "name": "Abraka Gordons Beach Resort",
+      "address": "Abraka, Delta State",
+      "description": "The Gordon Resort Hotel, also known as McCarthy Beach, is a resort in Abraka, Delta State, Nigeria. It's known for its white sand beach, natural setting, and large gardens.",
+      "image": "images/Abraka Gordons Beach Resort.webp"
     },
   
 
