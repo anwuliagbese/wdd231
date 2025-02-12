@@ -39,3 +39,5 @@ function loadCards() {
       })
       .catch(error => console.error("Error loading JSON:", error));
 }
+document.querySelector("#copyright").textContent = `© ${new Date().getFullYear()}`;
+document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;

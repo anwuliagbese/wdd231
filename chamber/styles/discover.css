@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    background: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.active {
+    background: #555;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#cards-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas: 
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 .";
+}
+
+.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.list-view {
+    display: block;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}

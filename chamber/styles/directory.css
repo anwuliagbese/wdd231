@@ -1,0 +1,15 @@
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.list-view {
+    display: block;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}

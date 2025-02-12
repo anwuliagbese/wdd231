@@ -1,30 +1,35 @@
 [
-  {
-      "title": "Historic Downtown",
-      "image": "images/downtown.webp",
-      "address": "123 Main St, City",
-      "description": "Explore historic buildings, shops, and cafes.",
-      "link": "#"
-  },
-  {
-      "title": "City Park",
-      "image": "images/park.webp",
-      "address": "456 Greenway Rd",
-      "description": "Enjoy walking trails, playgrounds, and picnic areas.",
-      "link": "#"
-  },
-  {
-      "title": "Museum of History",
-      "image": "images/museum.webp",
-      "address": "789 Heritage Ln",
-      "description": "Discover the rich history of our town.",
-      "link": "#"
-  },
-  {
-      "title": "Community Theater",
-      "image": "images/theater.webp",
-      "address": "321 Performance Ave",
-      "description": "Watch amazing local performances and shows.",
-      "link": "#"
-  }
+    {
+      "name": "Onyx Bites Catering",
+      "address": "123 Main Street, Cityville",
+      "phone": "(123) 456-7890",
+      "website": "https://onyxbites.com",
+      "image": "onyx-bites.webp",
+      "membership": 3
+    },
+    {
+      "name": "Elite Event Planners",
+      "address": "456 Elm Street, Townsville",
+      "phone": "(987) 654-3210",
+      "website": "https://eliteevents.com",
+      "image": "elite-events.webp",
+      "membership": 2
+    },
+  
+
+    {
+        "name": "Local Bakery",
+        "address": "123 Main St, City, State",
+        "description": "A delightful bakery with fresh pastries and breads.",
+        "image": "images/bakery.webp",
+        "website": "https://bakery.example.com"
+    },
+    {
+        "name": "Tech Solutions",
+        "address": "456 Innovation Way, City, State",
+        "description": "Cutting-edge technology solutions for businesses.",
+        "image": "images/tech.webp",
+        "website": "https://tech.example.com"
+    }
 ]
+  

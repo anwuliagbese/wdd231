@@ -3,46 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover - Agbese Chamber of Commerce</title>
-
-    <meta name="author" content="Anwuli Joyce Agbese">
-    <meta name="description" content="Welcome to the Agbese Chamber of Commerce. Join us in supporting local businesses.">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <script src="scripts/main.js" defer></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-
-    <meta property="og:title" content="Agbese Chamber of Commerce Directory">
-    <meta property="og:description" content="Explore local businesses and connect with our members in the Agbese Chamber of Commerce.">
-    <meta property="og:image" content="https://anwuliagbese.github.io/wdd231/chamber/images/social-image.jpg">
-    <meta property="og:url" content="https://anwuliagbese.github.io/wdd231/chamber/discover.html">
-    <meta property="og:type" content="website">
+    <title>Discover | Chamber</title>
+    <link rel="stylesheet" href="styles/discover.css">
+    <script defer src="scripts/discover.js"></script>
 </head>
 <body>
     <header>
-        <h1>Discover Our Community</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="discover-grid">
-        <aside class="sidebar">
-            <p id="visit-message"></p>
-        </aside>
+    <main>
+        <h1>Discover Our Community</h1>
+        <p id="visit-message"></p>
 
-        <section id="cards-container">
-            <!-- Cards will be dynamically loaded from JSON -->
+        <button id="toggle-view">Toggle View</button>
+
+        <section id="cards-container" class="grid-view">
+            <!-- Cards will be inserted here dynamically -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Chamber of Commerce</p>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
 </body>
 </html>
