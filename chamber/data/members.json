@@ -14,18 +14,40 @@
   
 
     {
-        "name": "Local Bakery",
-        "address": "123 Main St, City, State",
-        "description": "A delightful bakery with fresh pastries and breads.",
-        "image": "images/bakery.webp",
-        "website": "https://bakery.example.com"
+        "name": "Central Mosque",
+        "address": "Central Mosque Abuja",
+        "description": "The Abuja National Mosque is a striking Islamic architectural complex in the capital city of Abuja, Nigeria. It's a major religious site in Nigeria and is open to the public, except during prayer times.",
+        "image": "images/Central Mosque.webp"
     },
     {
-        "name": "Tech Solutions",
-        "address": "456 Innovation Way, City, State",
-        "description": "Cutting-edge technology solutions for businesses.",
-        "image": "images/tech.webp",
-        "website": "https://tech.example.com"
+        "name": "Mpape Crushed Rock",
+        "address": "Mpape Crushed Rock, Abuja",
+        "description": "The Mpape Crushed Rock is an abandoned granite quarry located in the Mpape suburb of Abuja, Nigeria, which was once a key source of stone used to build the city during its development in the 1980s; now, the quarry and its formed lake are a popular tourist spot due to its unique landscape and history, despite being abandoned for many years.",
+        "image": "images/Crushed Rock.webp"
+    },
+    {
+        "name": "Hi Impact Planet",
+        "address": "Hi Impact Planet, Lagos",
+        "description": "Hi Impact, also known as Hi-Impact Planet,is a large-scale amusement park and resort located on the outskirts of Lagos, Nigeria, offering a variety of thrilling outdoor rides, indoor games, and family-friendly activities suitable for all ages; essentially the primary entertainment destination in the area with a focus on providing a fun-filled experience for everyone.",
+        "image": "images/Hi Impact.webp"
+    },
+    {
+        "name": "Idanre Hills",
+        "address": "Idanre Town , Ondo State",
+        "description": "The Idanre Hills, also known as Oke Idanre, are a scenic landscape in Nigeria with a diverse ecosystem and many cultural sites. The hills are home to the Orosun peak, the highest elevation in southwest Nigeria.",
+        "image": "images/Idanre Hills.webp"
+    },
+    {
+        "name": "Obudu Mountain Resort",
+        "address": "Obudu Mountain Resort, Calabar, Cross river State",
+        "description": "Obudu Mountain Resort, also known as Obudu Cattle Ranch, is a resort in Cross River State, Nigeria. It's a popular tourist destination known for its natural beauty, adventure, and tranquility.",
+        "image": "images/Obudu_Resort.webp"
+    },
+    {
+        "name": "Olumo Rock",
+        "address": "Olumo Rock, Abeokuta, Ogun State",
+        "description": "Olumo Rock is a prominent granite outcrop located in Abeokuta, Nigeria, which served as a natural fortress for the Egba people during 19th century inter-tribal wars, holding great historical significance as the founding site of the city and considered a symbol of their resilience; the name Olumo translates to God moulded rock in the Yoruba language, reflecting its revered status in the local culture.",
+        "image": "images/Olumo Rock.webp"
     }
 ]
   
