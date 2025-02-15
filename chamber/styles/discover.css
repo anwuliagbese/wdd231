@@ -27,6 +27,51 @@ main {
     text-align: center;
 }
 
+
+#menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    background: #333;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+#menu-toggle {
+    display: none;
+    background: #333;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 #cards-container {
     display: grid;
     gap: 20px;

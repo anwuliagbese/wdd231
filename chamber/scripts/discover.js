@@ -42,3 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("last-modified").textContent = document.lastModified;
 });
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("menu").classList.toggle("show");
+});
