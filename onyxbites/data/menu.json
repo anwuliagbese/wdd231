@@ -1,0 +1,62 @@
+{
+    "categories": [
+      {
+        "name": "Appetizers",
+        "items": [
+          {
+            "name": "Suya Skewers",
+            "description": "Spicy, grilled beef skewers marinated with peanut-based suya spice.",
+            "price": 15,
+            "image": "images/spicy african suya kebab skewers.jpg",
+            "featured": true
+          },
+          {
+            "name": "Nigerian small chops",
+            "description": "A platter of small, bite-sized snacks to munch on before the main meal.",
+            "price": 10.99,
+            "image": "images/Nigerian small chops.jpg",
+            "featured": false
+          }
+        ]
+      },
+      {
+        "name": "Main Courses",
+        "items": [
+          {
+            "name": "Jollof rice and raosted fish",
+            "description": "Spice up your lunch menu with this delectable jollof rice and fried fish dish. This jollof rice and fried fish came together very well.",
+            "price": 18.99,
+            "image": "images/Jollof rice and roasted fish.jpg",
+            "featured": true
+          },
+          {
+            "name": "Pounded yam and egusi soup",
+            "description": "This traditional delicacy combines the smoothness of pounded yam with the rich flavors of Egusi soup, resulting in a delightful culinary experience.",
+            "price": 22.99,
+            "image": "images/Pounded yam and egusi soup.jpg",
+            "featured": false
+          }
+        ]
+      },
+      {
+        "name": "Desserts",
+        "items": [
+          {
+            "name": "Strawberry Icecream",
+            "description": " a flavor of ice cream made with strawberry or strawberry flavoring that will melt in your mouth!.",
+            "price": 7.99,
+            "image": "images/Strawberry Icecream.jpg",
+            "featured": true
+          },
+          {
+            "name": "Fruit Yogurt Parfait",
+            "description": "This yogurt parfait is made by simply layering vanilla yogurt, granola and fruit in a glass. A delicious and beautiful beginning to your day!.",
+            "price": 6.99,
+            "image": "images/Fruit yogurt parfait.jpg",
+            "featured": false
+          }
+        ]
+      }
+    ]
+  }
+  

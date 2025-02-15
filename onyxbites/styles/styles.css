@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #333333
+}
+
+.featured {
+    background: #333333;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#close-offer {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333333;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#close-offer:hover {
+    background-color: #333333;
+}
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    color: #ff9800;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #e68900;
+    text-decoration: underline;
+}
